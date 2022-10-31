@@ -1,0 +1,89 @@
+.project {
+    flex-wrap: wrap;
+
+    &__item {
+        width: calc((100% - 60px) / 3);
+        margin-right: 30px;
+        margin-bottom: 30px;
+        background: $page-background;
+        @include transition ($transition-property: (border, box-shadow, background));
+    }
+
+    &__item:hover,
+    &__item:focus {
+        border: 1px solid $white;
+        box-shadow: $project-box-shadow;
+    }
+
+    &__item:hover &__description-text,
+    &__item:focus &__description-text {
+        transform: translateY(0);
+    }
+
+    /* Каждый третий */
+    &__item:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    &_item:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        list-style: none;
+        color: $priority-text-color;
+    }
+
+    &__link:visited,
+    &__link {
+        font-size: 16px;
+        line-height: 1.87;
+    }
+
+    &__description-container {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    &__description-text {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        left: 0;
+        top: 0;
+        @include transition ($transition-property: transform);
+        transform: translateY(calc(100% + 1px));
+        /* transform: translateY(100%); */
+
+        font-size: 18px;
+        line-height: calc(28 / 18);
+        padding: 63px 24px;
+
+        color: $white;
+        background-color: $accent-color;
+    }
+
+    &__caption {
+        padding: 20px 24px;
+        border-right: 1px solid $project-border;
+        border-left: 1px solid $project-border;
+        border-bottom: 1px solid $project-border;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        color: $title-text-color;
+        margin-bottom: 4px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.87;
+    }
+}

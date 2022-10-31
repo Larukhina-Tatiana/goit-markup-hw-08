@@ -1,0 +1,37 @@
+.team {
+    background-color: $team-background;
+}
+
+.team-list {
+    justify-content: space-between;
+
+
+    &__item {
+        width: 270px;
+        background: $page-background;
+        box-shadow: $team-box-shadow;
+        border-radius: 0px 0px 4px 4px;
+        margin-bottom: 30px;
+    }
+
+    &__caption {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__subtitle {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: calc(19/16);
+        text-align: center;
+        color: $title-text-color;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: calc(19/16);
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,15 @@
+@mixin font-style ($font-family: "Roboto", $font-weight: 400, $font-size: 14px, $line-height: calc(24/14),$letter-spacing:0.03em, $background-color: $page-background, $color: $priority-text-color) {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    background-color: $page-background;
+    color: $color;
+}
+
+@mixin transition ($transition-property: color, $transition-duration: 250ms, $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)){
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+}

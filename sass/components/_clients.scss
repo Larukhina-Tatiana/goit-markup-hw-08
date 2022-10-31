@@ -1,0 +1,27 @@
+.clients-list {
+    // justify-content: space-between;
+
+    &__link {
+        width: 170px;
+        height: 92px;
+        border: 1px solid $clients;
+        border-radius: 4px;
+        @include transition ($transition-property: (border, fill));
+    }
+
+    &__link:hover &__icon,
+    &__link:focus &__icon {
+        fill: $accent-color;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        border: 1px solid $accent-color;
+    }
+
+    &__icon {
+        fill: $clients;
+        @include transition ($transition-property: (border, fill));
+    }
+
+}

@@ -1,0 +1,46 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: $hero-footer-background;
+
+    &__container {
+        display: flex;
+        justify-content: left;
+        gap: 70px;
+        align-items: baseline;
+    }
+
+    // &__logo {
+    //     color: $logo-footer;
+    //     background:$hero-footer-background;
+    // }
+
+    &__text {
+        font-weight: 700;
+        line-height: calc(16 / 14);
+        text-transform: uppercase;
+        color: $hero;
+
+        margin-bottom: 20px;
+    }
+}
+
+.address {
+    margin-top: 20px;
+
+    &__item--margin-top {
+        margin-top: 9px;
+    }
+
+    &__link {
+        font-style: normal;
+        line-height: 1.7;
+        color: $logo-footer;
+
+
+        &--color {
+            color: $address-color;
+            @include transition ($transition-property: color);
+        }
+    }
+}

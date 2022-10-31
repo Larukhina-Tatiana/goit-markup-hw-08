@@ -1,0 +1,13 @@
+.logo {
+    @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 26px, $line-height: 1.22, $letter-spacing: 0.03em, $color: $accent-color);
+    background: none;
+}
+
+.header__logo {
+    color: $logo-header;
+}
+
+.footer__logo {
+    color: $logo-footer;
+    background: $hero-footer-background;
+}
