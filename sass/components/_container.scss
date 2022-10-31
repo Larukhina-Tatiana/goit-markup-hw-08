@@ -1,5 +1,5 @@
 body {
-    @include font-style ($font-family: 'Roboto', $font-weight: 400, $font-size: 14px, $line-height: calc(24/14),$letter-spacing:0.03em, $background-color: $page-background, $color: $priority-text-color);
+    @include font-style ($font-family: 'Roboto', $font-weight: 400, $font-size: 14px, $line-height: calc(24/14), $letter-spacing: 0.03em, $background-color: $page-background, $color: $priority-text-color);
     margin: 0%;
 }
 
@@ -20,4 +20,4 @@ body {
     }
 
 
-  }
+}

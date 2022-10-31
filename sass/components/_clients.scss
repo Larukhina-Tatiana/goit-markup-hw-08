@@ -1,9 +1,16 @@
 .clients-list {
-    // justify-content: space-between;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    // flex-basis: calc((100% - 60px)/2);
+    gap: 15px;
 
+    
     &__link {
-        width: 170px;
+        display: inline-flex;
+        width: 210px;
         height: 92px;
+        
         border: 1px solid $clients;
         border-radius: 4px;
         @include transition ($transition-property: (border, fill));
