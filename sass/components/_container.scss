@@ -1,13 +1,11 @@
-body {
-    @include font-style ($font-family: 'Roboto', $font-weight: 400, $font-size: 14px, $line-height: calc(24/14), $letter-spacing: 0.03em, $background-color: $page-background, $color: $priority-text-color);
-    margin: 0%;
-}
 
 .container {
-    margin: 0 auto;
+    margin: auto;
     padding: 0 15px;
-    height: 100vh;
+    // height: 100vh;
 
+    width: 100%;
+   
     @media screen and (min-width: 480px) {
         width: 480px;
     }

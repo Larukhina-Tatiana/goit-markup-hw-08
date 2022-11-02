@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-img {
+image, a {
   display: block;
 }
 
@@ -60,22 +60,10 @@ ul {
   padding-bottom: 0;
 }
 
-body {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7142857143;
-  letter-spacing: 0.03em;
-  background-color: #ffffff;
-  color: #757575;
-  margin: 0%;
-}
-
 .container {
-  margin: 0 auto;
+  margin: auto;
   padding: 0 15px;
-  height: 100vh;
+  width: 100%;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -91,6 +79,18 @@ body {
   .container {
     width: 1170px;
   }
+}
+
+body {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+  background-color: #ffffff;
+  color: #757575;
+  margin: 0%;
 }
 
 .section__title {
@@ -140,6 +140,9 @@ body {
   background-color: #ffffff;
   color: #2196f3;
   background: none;
+  padding-top: 48px;
+  padding-left: 40px;
+  display: none;
 }
 
 .header__logo {
@@ -154,9 +157,18 @@ body {
 .nav {
   color: #212121;
 }
+.nav__btn {
+  background: transparent;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #000000;
+}
 .nav__list {
   gap: 50px;
   margin-left: 91px;
+  display: none;
 }
 .nav__item--position-relative {
   display: inline-block;
@@ -194,6 +206,7 @@ body {
 
 .contacts-list {
   margin-left: auto;
+  display: none;
 }
 .contacts-list__icon {
   fill: #757575;

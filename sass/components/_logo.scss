@@ -1,6 +1,9 @@
 .logo {
     @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 26px, $line-height: 1.22, $letter-spacing: 0.03em, $color: $accent-color);
     background: none;
+    padding-top: 48px;
+    padding-left: 40px;
+    display: none;
 }
 
 .header__logo {

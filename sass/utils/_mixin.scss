@@ -13,3 +13,11 @@
     transition-duration: $transition-duration;
     transition-timing-function: $transition-timing-function;
 }
+@mixin flex ($gap, $jc: center, $ai: center, $direction: row, $wrapper: wrap) {
+    display: flex;
+    gap: $gap;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-flow: $direction $wrapper;
+    
+}

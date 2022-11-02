@@ -1,9 +1,20 @@
 .nav {
   color: $title-text-color;
 
+  &__btn {
+    background: transparent;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: $nav-btn;
+  }
+
   &__list {
     gap: 50px;
     margin-left: 91px;
+    
+    display: none;
   }
 
   &__item--position-relative {

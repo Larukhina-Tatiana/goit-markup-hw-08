@@ -2,6 +2,8 @@
     margin-left: auto;
     // gap: 30px;
 
+    display: none;
+
     &__icon {
         fill: $priority-text-color;
         @include transition($transition-property: fill);
