@@ -10,17 +10,11 @@
         align-items: baseline;
     }
 
-    // &__logo {
-    //     color: $logo-footer;
-    //     background:$hero-footer-background;
-    // }
-
     &__text {
         font-weight: 700;
         line-height: calc(16 / 14);
         text-transform: uppercase;
         color: $hero;
-
         margin-bottom: 20px;
     }
 }
@@ -35,12 +29,16 @@
     &__link {
         font-style: normal;
         line-height: 1.7;
-        color: $logo-footer;
+        color: $white;
 
-
-        &--color {
+        &--footer-color {
             color: $address-color;
+        }
+
+        &--footer-color:hover,
+        &--footer-color:focus {
+            color: $accent-color;
             @include transition ($transition-property: color);
         }
     }
-}
+    }

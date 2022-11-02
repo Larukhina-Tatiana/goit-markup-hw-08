@@ -1,0 +1,12 @@
+.main_scrin {
+    padding: 100px 0;
+    text-align: center;
+
+    &__text {
+        @include font-style();
+    }
+
+    &__text {
+        @include font-style();
+    }
+}

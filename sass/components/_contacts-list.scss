@@ -1,12 +1,17 @@
 .contacts-list {
     margin-left: auto;
     // gap: 30px;
+
+    &__icon {
+        fill: $priority-text-color;
+        @include transition($transition-property: fill);
+    }
 }
 
 .contacts-list__link {
-    // display: inline-flex;
-    // align-items: center;
-    // gap: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     @include font-style($font-weight: 500, $letter-spacing: 0.02em, $color: $priority-text-color);
     @include transition($transition-property: color);
 
@@ -15,11 +20,7 @@
         color: $accent-color;
     }
 
-    &__icon {
-        color: $priority-text-color;
-        @include transition($transition-property: color);
-    }
-
+    
     &:hover .contacts-list__icon,
     &:focus .contacts-list__icon {
         fill: $accent-color;

@@ -10,12 +10,15 @@
     height: 44px;
     border-radius: 50%;
     background: $page-background;
+    fill: $clients;
     @include transition($transition-property: background);
   }
 
   &__link:hover,
   &__link:focus {
     background-color: $accent-color;
+    // color: $white;
+    fill: $white;
   }
 
   &__link--bg {
@@ -23,18 +26,7 @@
   }
 
   &__svg {
-    fill: $clients;
-    @include transition($transition-property: fill);
-  }
-
-  &__svg:hover,
-  &__svg:focus {
-    fill: $logo-footer;
-  }
-
-  &__link:hover &__svg,
-  &:focus &__svg {
-    fill: $logo-footer;
+    // fill: $clients;
     @include transition($transition-property: fill);
   }
 }

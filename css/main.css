@@ -75,6 +75,7 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
+  height: 100vh;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -88,7 +89,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1170px;
   }
 }
 
@@ -191,13 +192,55 @@ body {
   /* opacity: 0; */
 }
 
+.contacts-list {
+  margin-left: auto;
+}
+.contacts-list__icon {
+  fill: #757575;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-list__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.02em;
+  background-color: #ffffff;
+  color: #757575;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-list__link:hover, .contacts-list__link:focus {
+  color: #2196f3;
+}
+.contacts-list__link:hover .contacts-list__icon, .contacts-list__link:focus .contacts-list__icon {
+  fill: #2196f3;
+}
+
 .features-list {
   padding-bottom: 0;
   /* Заголовки h3 Секции "Особенности"*/
   /* текст Секции "Особенности" */
 }
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .features-list__item {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .features-list__item {
+    width: 50%;
+  }
 }
 .features-list__subtitle {
   margin-bottom: 10px;
@@ -219,6 +262,12 @@ body {
   border-radius: 4px;
   margin-bottom: 30px;
   background-color: #f5f4fa;
+}
+
+@media screen and (max-width: 767px) {
+  .our-work {
+    display: none;
+  }
 }
 
 .our-work__list {
@@ -247,9 +296,6 @@ body {
   background-color: #f5f4fa;
 }
 
-.team-list {
-  justify-content: space-between;
-}
 .team-list__item {
   width: 270px;
   background: #ffffff;
@@ -288,33 +334,23 @@ body {
   height: 44px;
   border-radius: 50%;
   background: #ffffff;
+  fill: #afb1b8;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-list__link:hover, .social-list__link:focus {
   background-color: #2196f3;
+  fill: #ffffff;
 }
 .social-list__link--bg {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .social-list__svg {
-  fill: #afb1b8;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-list__svg:hover, .social-list__svg:focus {
-  fill: #ffffff;
-}
-.social-list__link:hover .social-list__svg, .social-list:focus .social-list__svg {
-  fill: #ffffff;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list {
-  justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
   gap: 15px;
 }
 .clients-list__link {
@@ -368,8 +404,11 @@ body {
   line-height: 1.7;
   color: #ffffff;
 }
-.address__link--color {
+.address__link--footer-color {
   color: rgba(255, 255, 255, 0.6);
+}
+.address__link--footer-color:hover, .address__link--footer-color:focus {
+  color: #2196f3;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
