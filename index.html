@@ -17,21 +17,16 @@
 
 <body>
   <header class="header">
-    <!-- шапка меню-->
+    <!-- шапка меню -->
     <div class="container">
       <nav class="nav">
-        <button class="nav__btn"type="button">
-          <svg with="40" height="40" aria-label="Перемикач мобільного меню">
-            <use class="nav__icon" href="./images/icons/new/icon1.svg#icon-close_burger"></use>
-            <use class="nav__icon" href="./images/icons/new/icon1.svg#icon-menu_burger"></use>
-          </svg>
-        </button>
+
         <a class="logo" href="./index.html" lang="en">Web<span class="logo header__logo">Studio</span></a>
-        
+
+
         <ul class="nav__list ">
           <li class="nav__item nav__item--position-relative">
-            <a class="nav__link nav__link--accent nav__link--active nav__link--after"
-              href="./index.html">Студія</a>
+            <a class="nav__link nav__link--accent nav__link--active nav__link--after" href="./index.html">Студія</a>
           </li>
           <li class=" nav__item--position-relative">
             <a class="nav__link nav__link--accent" href="./portfolio.html">Портфоліо</a>
@@ -40,11 +35,12 @@
             <a class="nav__link nav__link--accent" href="#">Контакти</a>
           </li>
         </ul>
+
       </nav>
       <!-- Контакты -->
       <ul class="contacts-list">
         <li class="contacts-list__item">
-          <a class="contacts-list__link contacts-list__link--accent" href="mailto:info@devstudio.com"> 
+          <a class="contacts-list__link contacts-list__link--accent" href="mailto:info@devstudio.com">
             <svg class="contacts-list__icon" width="16" height="12">
               <use href="./images/icons/icons.svg#icon-envelope"></use>
             </svg>
@@ -60,6 +56,15 @@
           </a>
         </li>
       </ul>
+      <button class="nav__btn is-open" type="button" aria-expanded="false" aria-controls="nav__menu-container"
+        data-menu-button>
+        <svg width="24" height="16" aria-label="Перемикач мобільного меню">
+          <use class="nav__icon-cross" href="./images/icons/new/icon1.svg#icon-close_burger"></use>
+          <use class="nav__icon-menu" href="./images/icons/new/icon1.svg#icon-menu_burger"></use>
+        </svg>
+      </button>
+      <div class="nav__menu-container" id="nav__menu-container" data-menu></div>
+
     </div>
   </header>
   <main>
@@ -384,9 +389,9 @@
         </address>
       </div> -->
 
-      <!--  Приєднуйтесь -->
+  <!--  Приєднуйтесь -->
 
-      <!-- <div class="fotter__wrapper">
+  <!-- <div class="fotter__wrapper">
         <p class="footer__text">Приєднуйтесь</p>
 
         <ul class="social-list">
@@ -425,9 +430,9 @@
 
       <div class="fotter_wrapper">
         <p class="footer__text">Підпишіться на розсилку</p>  -->
-          <!-- Форма с email -->
+  <!-- Форма с email -->
 
-        <!-- <form class="form-mail" name="footer-mail"  novalidate>
+  <!-- <form class="form-mail" name="footer-mail"  novalidate>
           <label class="form-mail__label" for="user_email"></label>
           <input class="form-mail__input" type="email" name="email" id="user_email" placeholder="E-mail" required>
 
@@ -449,11 +454,11 @@
           <use href="./images/icons/icons.svg#icon-close-black-18dp"></use>
         </svg>
       </button> -->
-      <!-- Форма -->
-      <!-- <form class="form">
+  <!-- Форма -->
+  <!-- <form class="form">
         <p class="form__title">Залиште свої дані, ми вам передзвонимо</p> -->
 
-        <!-- <label class="form__label" for="first-name">Ім'я</label>
+  <!-- <label class="form__label" for="first-name">Ім'я</label>
         <div class="form__icon-wrap">
           <input class="form__input" type="text" name="first-name" id="first-name" required>
           <svg class="form__icon" width="18" height="18">
@@ -504,4 +509,4 @@
 
 </body>
 
-</html> 
+</html>

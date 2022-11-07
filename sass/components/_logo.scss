@@ -1,16 +1,36 @@
-.logo {
-    @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 26px, $line-height: 1.22, $letter-spacing: 0.03em, $color: $accent-color);
-    background: none;
-    padding-top: 48px;
-    padding-left: 40px;
-    display: none;
+// .logo {
+//     @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 24px, $line-height: (28/24) , $letter-spacing: 0.03em, $color: $accent-color);
+//     background: none;
+//     display: inline-block;
+   
+// }
+
+// .header__logo {
+//     color: $logo-header;
+// }
+
+// .footer__logo {
+//     color: $logo-footer;
+//     background: $hero-footer-background;
+// }
+
+@media scrin and (min-width: 480px) {
+
+    .logo {
+        @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 24px, $line-height: (28/24) , $letter-spacing: 0.03em, $color: $accent-color);
+        background: none;
+        display: inline-block;
+        padding: 16px auto 16px 15px;
+    }
+    
+    .header__logo {
+        color: $logo-header;
+    }
+    
+    .footer__logo {
+        color: $logo-footer;
+        background: $hero-footer-background;
+    }
 }
 
-.header__logo {
-    color: $logo-header;
-}
-
-.footer__logo {
-    color: $logo-footer;
-    background: $hero-footer-background;
-}
+// @media scrin and (min-width: 768px) {}

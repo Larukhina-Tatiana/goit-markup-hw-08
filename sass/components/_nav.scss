@@ -1,51 +1,73 @@
 .nav {
   color: $title-text-color;
 
+
   &__btn {
     background: transparent;
     display: inline-flex;
-    margin: 0;
-    padding: 0;
+    margin: 10px 15px 10px auto;
+    padding: 12px 8px;
     border: none;
     color: $nav-btn;
+
   }
 
-  &__list {
-    gap: 50px;
-    margin-left: 91px;
-    
+  &__btn .nav__icon-cross {
     display: none;
   }
 
-  &__item--position-relative {
-    display: inline-block;
-    position: relative;
+  &__btn.is-open .nav__icon-cross {
+    display: block;
   }
 
-  &__link {
-    @include font-style($font-weight: 500,$letter-spacing: 0.02em, $color: $title-text-color);
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    
-    @include transition($transition-property: color);
-    
-    &--active,
-    &--accent:hover,
-    &--accent:focus {
-      color: $accent-color;
+  &__btn.is-open .nav__icon-menu {
+    display: none;
+  }
+}
+
+@media scrin and (min-width: 480px) {}
+
+@media scrin and (min-width: 768px) {
+
+  .nav {
+    color: $title-text-color;
+
+    &__list {
+      gap: 50px;
+      margin-left: 91px;
+
     }
 
-    &--after::after {
+    &__item--position-relative {
+      display: inline-block;
+      position: relative;
+    }
+
+    &__link {
+      @include font-style($font-weight: 500, $line-height: calc(16/14), $letter-spacing: 0.02em, $color: $title-text-color);
       display: block;
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 4px;
-      background-color: $accent-color;
-      border-radius: 2px;
-      bottom: -1px;
-      /* opacity: 0; */
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      @include transition($transition-property: color);
+
+      &--active,
+      &--accent:hover,
+      &--accent:focus {
+        color: $accent-color;
+      }
+
+      &--after::after {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: $accent-color;
+        border-radius: 2px;
+        bottom: -1px;
+        /* opacity: 0; */
+      }
     }
   }
 }
