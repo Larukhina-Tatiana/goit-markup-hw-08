@@ -1,26 +1,27 @@
-// .logo {
-//     @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 24px, $line-height: (28/24) , $letter-spacing: 0.03em, $color: $accent-color);
-//     background: none;
-//     display: inline-block;
-   
-// }
 
-// .header__logo {
-//     color: $logo-header;
-// }
+.logo {
+    @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 24px, $line-height: calc(28/24) , $letter-spacing: 0.03em, $color: $accent-color);
+    background: none;
+    display: inline-block;
+}
 
-// .footer__logo {
-//     color: $logo-footer;
-//     background: $hero-footer-background;
-// }
+.header__logo {
+    color: $logo-header;
+}
+
+.footer__logo {
+    color: $logo-footer;
+    background: $hero-footer-background;
+}
 
 @media scrin and (min-width: 480px) {
 
     .logo {
-        @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 24px, $line-height: (28/24) , $letter-spacing: 0.03em, $color: $accent-color);
+        @include font-style ($font-family: "Raleway", $font-weight: 700, $font-size: 24px, $line-height: calc(28/24) , $letter-spacing: 0.03em, $color: $accent-color);
         background: none;
         display: inline-block;
         padding: 16px auto 16px 15px;
+        margin: 16px 0;
     }
     
     .header__logo {

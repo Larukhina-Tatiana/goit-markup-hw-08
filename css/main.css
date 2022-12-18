@@ -103,6 +103,7 @@ body {
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
@@ -131,6 +132,28 @@ body {
   color: #ffffff;
 }
 
+.logo {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.03em;
+  background-color: #ffffff;
+  color: #2196f3;
+  background: none;
+  display: inline-block;
+}
+
+.header__logo {
+  color: #000000;
+}
+
+.footer__logo {
+  color: #ffffff;
+  background: #2f303a;
+}
+
 @media scrin and (min-width: 480px) {
   .logo {
     font-family: "Raleway";
@@ -144,6 +167,7 @@ body {
     background: none;
     display: inline-block;
     padding: 16px auto 16px 15px;
+    margin: 16px 0;
   }
   .header__logo {
     color: #000000;
@@ -155,6 +179,11 @@ body {
 }
 .nav {
   color: #212121;
+}
+.nav__container-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav__btn {
   background: transparent;
@@ -173,52 +202,31 @@ body {
 .nav__btn.is-open .nav__icon-menu {
   display: none;
 }
-
-@media scrin and (min-width: 768px) {
-  .nav {
-    color: #212121;
-  }
-  .nav__list {
-    gap: 50px;
-    margin-left: 91px;
-  }
-  .nav__item--position-relative {
-    display: inline-block;
-    position: relative;
-  }
-  .nav__link {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.1428571429;
-    letter-spacing: 0.02em;
-    background-color: #ffffff;
-    color: #212121;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .nav__link--active, .nav__link--accent:hover, .nav__link--accent:focus {
-    color: #2196f3;
-  }
-  .nav__link--after::after {
-    display: block;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 4px;
-    background-color: #2196f3;
-    border-radius: 2px;
-    bottom: -1px;
-    /* opacity: 0; */
-  }
+.nav__menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none;
 }
+.nav__menu-container.is-open {
+  display: block;
+}
+.nav__link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  background-color: #ffffff;
+  color: #212121;
+  padding: 48px 0 32px 40px;
+}
+
 .contacts-list {
   margin-left: auto;
-  display: none;
 }
 .contacts-list__icon {
   fill: #757575;
