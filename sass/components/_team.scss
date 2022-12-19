@@ -3,14 +3,28 @@
 }
 
 .team-list {
-    // justify-content: space-between;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -5px;
+        gap: 30px;
+    }
 
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-basis: calc((100% - 8 * 5px) / 4);
+    }
+
+    // justify-content: space-between;
 
     &__item {
         background: $page-background;
         box-shadow: $team-box-shadow;
         border-radius: 0px 0px 4px 4px;
-        margin-bottom: 30px;
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__caption {
@@ -22,14 +36,14 @@
         margin-bottom: 10px;
         font-weight: 500;
         font-size: 16px;
-        line-height: calc(19/16);
+        line-height: calc(19 / 16);
         text-align: center;
         color: $title-text-color;
     }
 
     &__text {
         font-size: 16px;
-        line-height: calc(19/16);
+        line-height: calc(19 / 16);
         text-align: center;
         margin-bottom: 16px;
     }

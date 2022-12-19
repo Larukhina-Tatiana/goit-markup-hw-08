@@ -195,13 +195,69 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                class="team-list__img"
-                srcset="./images/studio/team/m-team-card-1@1x.jpg 1x, ./images/studio/team/m-team-card-1@2x.jpg 2x, ./images/studio/team/m-team-card-1@3x.jpg 3x"
-                src="./images/studio/team/m-team-card-1@1x.jpg"
-                alt="Фото Ігоря Дем'яненко"
-                width="450"
+              <picture>
+                <!-- <source
+                  srcset="
+                    ./images/studio/team/d-team-card-1@1x.webp 450w,
+                    ./images/studio/team/d-team-card-1@2x.webp 540w,
+                    ./images/studio/team/d-team-card-1@3x.webp 810w
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/team/d-team-card-1@1x.jpg 1x,
+                    ./images/studio/team/d-team-card-1@2x.jpg 2x,
+                    ./images/studio/team/d-team-card-1@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/team/t-team-card-1@1x.jpg 1x,
+                    ./images/studio/team/t-team-card-1@2x.jpg 2x,
+                    ./images/studio/team/t-team-card-1@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/team/d-team-card-1@1x.webp 270w,
+                    ./images/studio/team/d-team-card-1@2x.webp 540w,
+                    ./images/studio/team/d-team-card-1@3x.webp 810w
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                /> -->
+                <source
+                  srcset="
+                    ./images/studio/team/t-team-card-1@1x.webp 354w,
+                    ./images/studio/team/t-team-card-1@2x.webp 708w,
+                    ./images/studio/team/t-team-card-1@3x.webp 1062w
+                  "
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                />
+                <source
+                srcset="
+                  ./images/studio/team/m-team-card-1@1x.webp 450w,
+                  ./images/studio/team/m-team-card-1@2x.webp 900w,
+                  ./images/studio/team/m-team-card-1@3x.webp 1350w
+                "
+                type="image/webp"
+                media="(max-width: 480px)"
               />
+                <img
+                  srcset="
+                    ./images/studio/team/m-team-card-1@1x.jpg 1x,
+                    ./images/studio/team/m-team-card-1@2x.jpg 2x,
+                    ./images/studio/team/m-team-card-1@3x.jpg 3x
+                  "
+                  src="/images/studio/team/m-team-card-1@1x.jpg"
+                  alt="Фото Ігоря Дем'яненко"
+                />
+              </picture>
               <div class="team-list__caption">
                 <h3 class="team-list__subtitle">Ігор Дем'яненко</h3>
                 <p lang="en" class="team-list__text">Product Designer</p>
@@ -261,13 +317,34 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                class="team-list__img"
-                srcset="./images/studio/team/m-team-card-2@1x.jpg 1x, ./images/studio/team/m-team-card-2@2x.jpg 2x, ./images/studio/team/m-team-card-2@3x.jpg 3x"
-                src="./images/studio/team/m-team-card-2@1x.jpg"
-                alt="Фото Ольги Репіной"
-                width="450"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/team/d-team-card-2@1x.jpg 1x,
+                    ./images/studio/team/d-team-card-2@2x.jpg 2x,
+                    ./images/studio/team/d-team-card-2@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/team/t-team-card-2@1x.jpg 1x,
+                    ./images/studio/team/t-team-card-2@2x.jpg 2x,
+                    ./images/studio/team/t-team-card-2@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="
+                    ./images/studio/team/m-team-card-2@1x.jpg 1x,
+                    ./images/studio/team/m-team-card-2@2x.jpg 2x,
+                    ./images/studio/team/m-team-card-2@3x.jpg 3x
+                  "
+                  src="/images/studio/team/m-team-card-2@1x.jpg"
+                  alt="Фото Ольги Репіной"
+                />
+              </picture>
+
               <div class="team-list__caption">
                 <h3 class="team-list__subtitle">Ольга Репіна</h3>
                 <p lang="en" class="team-list__text">Frontend Developer</p>
@@ -326,13 +403,34 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                class="team-list__img"
-                srcset="./images/studio/team/m-team-card-3@1x.jpg 1x, ./images/studio/team/m-team-card-3@2x.jpg 2x, ./images/studio/team/m-team-card-3@3x.jpg 3x"
-                src="./images/studio/team/m-team-card-3@1x.jpg"
-                alt="Фото Миколи Тарасова"
-                width="450"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/team/d-team-card-3@1x.jpg 1x,
+                    ./images/studio/team/d-team-card-3@2x.jpg 2x,
+                    ./images/studio/team/d-team-card-3@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/team/t-team-card-3@1x.jpg 1x,
+                    ./images/studio/team/t-team-card-3@2x.jpg 2x,
+                    ./images/studio/team/t-team-card-3@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="
+                    ./images/studio/team/m-team-card-3@1x.jpg 1x,
+                    ./images/studio/team/m-team-card-3@2x.jpg 2x,
+                    ./images/studio/team/m-team-card-3@3x.jpg 3x
+                  "
+                  src="/images/studio/team/m-team-card-3@1x.jpg"
+                  alt="Фото Миколи Тарасова"
+                />
+              </picture>
+
               <div class="team-list__caption">
                 <h3 class="team-list__subtitle">Микола Тарасов</h3>
                 <p lang="en" class="team-list__text">Marketing</p>
@@ -391,14 +489,34 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                class="team-list__img"
-                srcset="./images/studio/team/m-team-card-4@1x.jpg 1x, ./images/studio/team/m-team-card-4@2x.jpg 2x, ./images/studio/team/m-team-card-4@3x.jpg 3x"
-                src="./images/studio/team/m-team-card-4@1x.jpg"
+              <picture>
+                <source
+                  srcset="
+                    ./images/studio/team/d-team-card-4@1x.jpg 1x,
+                    ./images/studio/team/d-team-card-4@2x.jpg 2x,
+                    ./images/studio/team/d-team-card-4@3x.jpg 3x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/studio/team/t-team-card-4@1x.jpg 1x,
+                    ./images/studio/team/t-team-card-4@2x.jpg 2x,
+                    ./images/studio/team/t-team-card-4@3x.jpg 3x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="
+                    ./images/studio/team/m-team-card-4@1x.jpg 1x,
+                    ./images/studio/team/m-team-card-4@2x.jpg 2x,
+                    ./images/studio/team/m-team-card-4@3x.jpg 3x
+                  "
+                  src="/images/studio/team/m-team-card-4@1x.jpg"
+                  alt="Фото Михайла Єрмакова"
+                />
+              </picture>
 
-                alt="Фото Михайла Єрмакова"
-                width="450"
-              />
               <div class="team-list__caption">
                 <h3 class="team-list__subtitle">Михайло Єрмаков</h3>
                 <p lang="en" class="team-list__text">UI Designer</p>
