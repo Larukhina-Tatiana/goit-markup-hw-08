@@ -14,10 +14,11 @@
     background: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/icons/hero.jpg);
+        url(/images/studio/Hero/m-hero@1x.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     &__title {
         width: 360px;
         margin-left: auto;
@@ -29,5 +30,60 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $hero;
+    }
+
+// База
+    @media (min-resolution: 2dppx) {
+        background: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/m-hero@2x.jpg);
+    }
+
+    @media (min-resolution: 3dppx) {
+        background: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/m-hero@3x.jpg);
+    }
+
+
+// Таблетка
+
+    @media screen and (min-width: 480px) {
+        background: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@1x.jpg);
+
+
+        @media (min-resolution: 2dppx) {
+            background: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@2x.jpg);
+        }
+
+        @media (min-resolution: 3dppx) {
+            background: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@3x.jpg);
+        }
+    }
+
+// Десктоп
+
+    @media screen and (min-width: 769px) {
+        background: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@1x.jpg);
+
+        @media (min-resolution: 2dppx) {
+            background: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@2x.jpg);
+        }
+
+        @media (min-resolution: 3dppx) {
+            background: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@3x.jpg);
+        }
     }
 }

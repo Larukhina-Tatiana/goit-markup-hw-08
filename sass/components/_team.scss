@@ -3,14 +3,14 @@
 }
 
 .team-list {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
         margin: -5px;
         gap: 30px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: desctop) {
         display: flex;
         flex-basis: calc((100% - 8 * 5px) / 4);
     }
@@ -22,7 +22,7 @@
         box-shadow: $team-box-shadow;
         border-radius: 0px 0px 4px 4px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (min-width: $mobile) {
             margin-bottom: 30px;
         }
     }

@@ -1,34 +1,104 @@
 .clients-list {
+  
+
+  @media screen and (min-width: $mobile) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+
+ 
+  &__link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 92px;
+
+    border: 1px solid $clients;
+    border-radius: 4px;
+    @include transition(
+      $transition-property: (
+        border,
+        fill,
+      )
+    );
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $accent-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &__icon {
+    fill: $clients;
+    @include transition(
+      $transition-property: (
+        border,
+        fill,
+      )
+    );
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
     // justify-content: space-between;
-    // display: flex;
-    // flex-wrap: wrap;
-    // flex-basis: calc((100% - 60px)/2);
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    
+    &__item {
+      flex-basis: calc((100% - (4*15px)) / 3);
+    }
     &__link {
-        display: inline-flex;
-        width: 210px;
-        height: 92px;
-        
-        border: 1px solid $clients;
-        border-radius: 4px;
-        @include transition ($transition-property: (border, fill));
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 92px;
+  
+      border: 1px solid $clients;
+      border-radius: 4px;
+      @include transition(
+        $transition-property: (
+          border,
+          fill,
+        )
+      );
     }
+  } 
+  @media screen and (min-width: $desctop) {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 
-    &__link:hover &__icon,
-    &__link:focus &__icon {
-        fill: $accent-color;
+    &__item {
+      flex-basis: calc((100% - (10*15px)) / 6);
     }
-
-    &__link:hover,
-    &__link:focus {
-        border: 1px solid $accent-color;
+    &__link {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 92px;
+  
+      border: 1px solid $clients;
+      border-radius: 4px;
+      @include transition(
+        $transition-property: (
+          border,
+          fill,
+        )
+      );
     }
+  }
 
-    &__icon {
-        fill: $clients;
-        @include transition ($transition-property: (border, fill));
-    }
-
+  
 }

@@ -119,7 +119,7 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: #c4c4c4;
-  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/icons/hero.jpg);
+  background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/m-hero@1x.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -135,6 +135,46 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media (min-resolution: 2dppx) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/m-hero@2x.jpg);
+  }
+}
+@media (min-resolution: 3dppx) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/m-hero@3x.jpg);
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@1x.jpg);
+  }
+}
+@media screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@2x.jpg);
+  }
+}
+@media screen and (min-width: 480px) and (min-resolution: 3dppx) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@3x.jpg);
+  }
+}
+@media screen and (min-width: 769px) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@1x.jpg);
+  }
+}
+@media screen and (min-width: 769px) and (min-resolution: 2dppx) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@2x.jpg);
+  }
+}
+@media screen and (min-width: 769px) and (min-resolution: 3dppx) {
+  .hero {
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@3x.jpg);
+  }
 }
 
 .logo {
@@ -332,7 +372,7 @@ body {
     gap: 30px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: desctop) {
   .team-list {
     display: flex;
     flex-basis: calc((100% - 40px) / 4);
@@ -343,7 +383,7 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 480px) {
   .team-list__item {
     margin-bottom: 30px;
   }
@@ -395,12 +435,21 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-list {
-  gap: 15px;
+@media screen and (min-width: 480px) {
+  .clients-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .clients-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 }
 .clients-list__link {
-  display: inline-flex;
-  width: 210px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -417,6 +466,46 @@ body {
   fill: #afb1b8;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .clients-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  .clients-list__link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .clients-list__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
+  .clients-list__link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .footer {
