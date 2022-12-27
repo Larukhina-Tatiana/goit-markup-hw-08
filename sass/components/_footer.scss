@@ -11,12 +11,21 @@
     }
 
     &__text {
+        text-align: center;
         font-weight: 700;
         line-height: calc(16 / 14);
         text-transform: uppercase;
         color: $hero;
         margin-bottom: 20px;
     }
+
+    &__wrapper{
+        text-align: center;
+    }
+
+    // &__wrapper1 {
+    //     display: flex;
+    // }
 }
 
 .address {

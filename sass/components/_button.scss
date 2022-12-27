@@ -18,7 +18,8 @@
 }
 
 .btn-send {
-    display: inherit;
+    display: inline-flex;
+
     width: 200px;
     height: 50px;
     color: $white;
