@@ -6,14 +6,10 @@
     @media screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
-        margin: -5px;
         gap: 30px;
     }
 
-    @media screen and (min-width: desctop) {
-        display: flex;
-        flex-basis: calc((100% - 8 * 5px) / 4);
-    }
+
 
     // justify-content: space-between;
 
@@ -21,9 +17,19 @@
         background: $page-background;
         box-shadow: $team-box-shadow;
         border-radius: 0px 0px 4px 4px;
+        margin-bottom: 30px;
 
-        @media screen and (min-width: $mobile) {
-            margin-bottom: 30px;
+        // @media screen and (min-width: $mobile) {
+        //     margin-bottom: 30px;
+        // }
+
+        @media screen and (min-width: $tablet) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+
+        @media screen and (min-width: $desctop) {
+            flex-wrap: nowrap;
+            flex-basis: calc((100% - 90px) / 4);
         }
     }
 

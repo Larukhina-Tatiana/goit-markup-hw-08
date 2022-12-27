@@ -32,55 +32,78 @@
         color: $hero;
     }
 
-// База
-    @media (min-resolution: 2dppx) {
+    // База
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (-o-mini-device-pixel-ratio: 2/1),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
         background: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/m-hero@2x.jpg);
     }
 
-    @media (min-resolution: 3dppx) {
+    @media screen and (min-device-pixel-ratio: 3),
+    screen and (-webkit-min-device-pixel-ratio: 3),
+    screen and (-o-mini-device-pixel-ratio: 3/1),
+    screen and (min-resolution: 228dpi),
+    screen and (min-resolution: 3dppx) {
         background: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/m-hero@3x.jpg);
     }
 
 
-// Таблетка
+    // Таблетка
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 577px) and (max-width: 960px) {
         background: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@1x.jpg);
 
 
-        @media (min-resolution: 2dppx) {
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-mini-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
             background: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@2x.jpg);
         }
 
-        @media (min-resolution: 3dppx) {
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (-webkit-min-device-pixel-ratio: 3),
+        screen and (-o-mini-device-pixel-ratio: 3/1),
+        screen and (min-resolution: 228dpi),
+        screen and (min-resolution: 3dppx) {
             background: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/t-hero@3x.jpg);
         }
     }
 
-// Десктоп
-
-    @media screen and (min-width: 769px) {
+    // Десктоп
+    @media screen and (min-width: 960px) {
         background: linear-gradient(to right,
                 rgba(47, 48, 58, 0.4),
                 rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@1x.jpg);
 
-        @media (min-resolution: 2dppx) {
+        @media screen and (min-device-pixel-ratio: 2),
+        screen and (-webkit-min-device-pixel-ratio: 2),
+        screen and (-o-mini-device-pixel-ratio: 2/1),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
             background: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@2x.jpg);
         }
 
-        @media (min-resolution: 3dppx) {
+        @media screen and (min-device-pixel-ratio: 3),
+        screen and (-webkit-min-device-pixel-ratio: 3),
+        screen and (-o-mini-device-pixel-ratio: 3/1),
+        screen and (min-resolution: 228dpi),
+        screen and (min-resolution: 3dppx) {
             background: linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)), url(/images/studio/Hero/d-hero@3x.jpg);

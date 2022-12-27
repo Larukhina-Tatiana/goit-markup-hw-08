@@ -1,26 +1,32 @@
 .features-list {
-  // display: flex;
-
-  // align-items: normal;
-  // justify-content: space-between;
   padding-bottom: 0;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 
-}
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
 
+    @media screen and (min-width: $desctop) {
 
-  &__item {
-    margin-bottom: 30px;
-    
-    @media screen and (min-width: 768px) {
-      width: 50%;
-      
+      flex-wrap: nowrap;
+      gap: 30px;
+
     }
   }
 
+  
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+
+
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+  }
 
   /* Заголовки h3 Секции "Особенности"*/
   &__subtitle {
@@ -35,20 +41,23 @@
   /* текст Секции "Особенности" */
   &__text {
     width: 450px;
-    line-height: calc(24/14);
+    line-height: calc(24 / 14);
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      height: 48px;
+    }
   }
 
+  /* Иконки секции Особливості через SVG*/
+
+  .wrapper-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: $team-background;
+  }
 }
-
-/* Иконки секции Особливості через SVG*/
-
-.wrapper-icon {
-  display: flex;
-  align-items: normal;
-  justify-content: center;
-  height: 120px;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  background-color: $team-background;
-}
-

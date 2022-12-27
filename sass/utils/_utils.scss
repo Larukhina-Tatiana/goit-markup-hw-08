@@ -10,7 +10,8 @@ a {
   text-decoration: none;
 }
 
-img, a {
+img,
+a {
   display: block;
 }
 
@@ -47,9 +48,18 @@ ul {
 //   margin: 0 auto;
 //   padding: 0 15px;
 // }
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* Скрытие заголовка */
@@ -64,9 +74,5 @@ ul {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
-
-.no-padding-bottom {
-  padding-bottom: 0;
 }
 

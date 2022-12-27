@@ -1,18 +1,12 @@
 .clients-list {
-  
 
-  @media screen and (min-width: $mobile) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
+  // База
 
-    &__item {
-      flex-basis: calc((100% - 30px) / 2);
-    }
-  }
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 
- 
   &__link {
     display: flex;
     justify-content: center;
@@ -21,12 +15,9 @@
 
     border: 1px solid $clients;
     border-radius: 4px;
-    @include transition(
-      $transition-property: (
-        border,
+    @include transition($transition-property: (border,
         fill,
-      )
-    );
+      ));
   }
 
   &__link:hover &__icon,
@@ -41,64 +32,34 @@
 
   &__icon {
     fill: $clients;
-    @include transition(
-      $transition-property: (
-        border,
+    @include transition($transition-property: (border,
         fill,
-      )
-    );
+      ));
   }
 
+
+  @media screen and (max-width: 767px) {
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+  }
+
+
   @media screen and (min-width: $tablet) {
-    display: flex;
-    // justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
 
     &__item {
       flex-basis: calc((100% - (4*15px)) / 3);
     }
-    &__link {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 92px;
-  
-      border: 1px solid $clients;
-      border-radius: 4px;
-      @include transition(
-        $transition-property: (
-          border,
-          fill,
-        )
-      );
-    }
-  } 
+  }
+
   @media screen and (min-width: $desctop) {
-    display: flex;
-    // justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
 
     &__item {
       flex-basis: calc((100% - (10*15px)) / 6);
     }
-    &__link {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      height: 92px;
-  
-      border: 1px solid $clients;
-      border-radius: 4px;
-      @include transition(
-        $transition-property: (
-          border,
-          fill,
-        )
-      );
-    }
+
   }
 
-  
+
 }
