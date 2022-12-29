@@ -21,10 +21,10 @@
 }
 
 @media screen and (min-width: 480px) {
-  .logo {
-    padding: 16px auto 16px 15px;
-    margin: 16px 0;
-  }
+  // .logo {
+  //   padding: 16px auto 16px 15px;
+  //   margin: 16px 0;
+  // }
 
   .header__logo {
     color: $logo-header;
@@ -33,6 +33,7 @@
   .footer__logo {
     color: $logo-footer;
     background: $hero-footer-background;
+    margin: 0;
   }
 }
 

@@ -3,12 +3,33 @@
     padding-bottom: 60px;
     background: $hero-footer-background;
 
+    //    
+
     &__container {
         display: flex;
-        justify-content: left;
-        gap: 70px;
-        align-items: baseline;
+        align-items: center;
+        text-align: center;
+        flex-flow: column wrap;
+        // justify-content: left;
+        gap: 60px;
+
+        @media screen and (min-width: $tablet) {
+            justify-content: space-around;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: baseline;
+        }
+
+        @media screen and (min-width: $desctop) {
+            display: flex;
+            flex-flow: unset;
+            align-items: baseline;
+        }
     }
+
+
+
+
 
     &__text {
         text-align: center;
@@ -16,23 +37,42 @@
         line-height: calc(16 / 14);
         text-transform: uppercase;
         color: $hero;
-        margin-bottom: 20px;
+        // padding-bottom: 20px;
     }
 
-    &__wrapper{
+    &__wrapper {
+        width: 100%;
         text-align: center;
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        flex-flow: column;
+        // margin-top: 60px;
+        // margin-bottom: 60px;
+
+        @media screen and (min-width: $tablet) {
+            width: 45%;
+        }
+
+        &-form {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            width: 100%;
+            // gap: 20px;
+        }
     }
 
-    // &__wrapper1 {
-    //     display: flex;
-    // }
+
+
+
 }
 
 .address {
-    margin-top: 20px;
+    margin-top: 4px;
 
     &__item--margin-top {
-        margin-top: 9px;
+        margin-top: 8px;
     }
 
     &__link {
@@ -50,4 +90,4 @@
             @include transition ($transition-property: color);
         }
     }
-    }
+}
