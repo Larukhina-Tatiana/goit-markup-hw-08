@@ -3,8 +3,6 @@
     padding-bottom: 60px;
     background: $hero-footer-background;
 
-    //    
-
     &__container {
         display: flex;
         align-items: center;
@@ -28,16 +26,12 @@
     }
 
 
-
-
-
     &__text {
         text-align: center;
         font-weight: 700;
         line-height: calc(16 / 14);
         text-transform: uppercase;
         color: $hero;
-        // padding-bottom: 20px;
     }
 
     &__wrapper {
@@ -47,8 +41,6 @@
         gap: 20px;
         display: flex;
         flex-flow: column;
-        // margin-top: 60px;
-        // margin-bottom: 60px;
 
         @media screen and (min-width: $tablet) {
             width: 45%;
@@ -62,9 +54,6 @@
             // gap: 20px;
         }
     }
-
-
-
 
 }
 
