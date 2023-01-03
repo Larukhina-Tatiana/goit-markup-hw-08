@@ -1,31 +1,47 @@
 .contacts-list {
-    margin-left: auto;
+    // margin-left: auto;
     // gap: 30px;
 
     // display: none;
+    display: flex;
+    flex-flow: column-reverse;
+    gap: 32px;
 
-    &__icon {
-        fill: $priority-text-color;
-        @include transition($transition-property: fill);
-    }
-}
+    @media screen and (min-width: 1200px) {
 
-.contacts-list__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    @include font-style($font-weight: 500, $letter-spacing: 0.02em, $color: $priority-text-color);
-    @include transition($transition-property: color);
+        &__icon {
+            fill: $priority-text-color;
+            @include transition($transition-property: fill);
+        }
 
-    &:hover,
-    &:focus {
-        color: $accent-color;
+        &:hover &__icon,
+        &:focus &__icon {
+            fill: $accent-color;
+        }
     }
 
-    
-    &:hover .contacts-list__icon,
-    &:focus .contacts-list__icon {
-        fill: $accent-color;
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        @include transition($transition-property: color);
+
+        @include font-style($font-weight: 500, $font-size: 34px, $line-height: calc(40/34), $letter-spacing: 0.02em, $color: $priority-text-color);
+
+        @media screen and (min-width: 1200px) {
+            @include font-style($font-weight: 500, $letter-spacing: 0.02em, $color: $priority-text-color);
+        }
+
+        &--accent,
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
     }
 
+    &__link--size {
+        @include font-style($font-weight: 500, $font-size: 24px, $line-height: calc(28/24), $letter-spacing: 0.02em, $color: $priority-text-color);
+    }
 }

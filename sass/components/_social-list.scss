@@ -13,6 +13,10 @@
     background: $page-background;
     fill: $clients;
     @include transition($transition-property: background);
+
+    &-text {
+      @include font-style($font-weight: 500, $font-size: 18px, $line-height: calc(22/18), $letter-spacing: 0.02em, $color: $accent-color);
+    }
   }
 
   &__link:hover,
