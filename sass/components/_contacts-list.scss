@@ -1,47 +1,54 @@
 .contacts-list {
-    // margin-left: auto;
-    // gap: 30px;
-
-    // display: none;
-    display: flex;
-    flex-flow: column-reverse;
-    gap: 32px;
-
-    @media screen and (min-width: 1200px) {
-
-        &__icon {
-            fill: $priority-text-color;
-            @include transition($transition-property: fill);
-        }
-
-        &:hover &__icon,
-        &:focus &__icon {
-            fill: $accent-color;
-        }
-    }
-
 
     &__link {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-
         @include transition($transition-property: color);
-
-        @include font-style($font-weight: 500, $font-size: 34px, $line-height: calc(40/34), $letter-spacing: 0.02em, $color: $priority-text-color);
-
-        @media screen and (min-width: 1200px) {
-            @include font-style($font-weight: 500, $letter-spacing: 0.02em, $color: $priority-text-color);
-        }
 
         &--accent,
         &:hover,
         &:focus {
             color: $accent-color;
         }
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+
+        &:hover .contacts-list__icon,
+        &:focus .contacts-list__icon {
+            fill: $accent-color;
+        }
     }
 
-    &__link--size {
-        @include font-style($font-weight: 500, $font-size: 24px, $line-height: calc(28/24), $letter-spacing: 0.02em, $color: $priority-text-color);
+    &__icon {
+        fill: $priority-text-color;
+        @include transition($transition-property: fill);
+    }
+
+    @media screen and (min-width: 769px) {
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+        align-items: flex-start;
+
+        &__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            @include font-style($font-weight: 500, $font-size: 12px, $line-height: calc(14/12), $letter-spacing: 0.02em, $color: $priority-text-color);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+
+        margin-left: auto;
+        gap: 30px;
+        flex-flow: row;
+
+        &__link {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            @include font-style($font-weight: 500, $font-size: 14px, $line-height: calc(16px /14px), $letter-spacing: 0.02em, $color: $priority-text-color);
+        }
     }
 }
