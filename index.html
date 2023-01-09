@@ -24,12 +24,14 @@
 
         <!-- <div class="nav__container-logo"> -->
         <a class="logo" href="./index.html" lang="en">Web<span class="logo header__logo">Studio</span></a>
-
-
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="nav__icon-menu" href="./images/icons/new/symbol-defs (1).svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+        
 
         <!-- Планшет -->
-
-
         <ul class="nav__list">
           <li class="nav__item nav__item--position-relative">
             <a class="nav__link nav__link--accent nav__link--active nav__link--after" href="./index.html">Студія</a>
@@ -62,6 +64,7 @@
           </li>
         </ul>
       </nav>
+
     </div>
 
   </header>
@@ -677,6 +680,59 @@
       </div>
     </div>
   </footer>
+
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+      <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+        <use class="menu-toggle__icon-cross" href="./images/icons/new/symbol-defs (1).svg#icon-close_40px"></use>
+      </svg>
+    </button>
+  
+    <ul class="menu">
+      <li class="menu__item">
+        <a class="menu__link menu__link--active" href="./index.html">Студія</a>
+      </li>
+      <li class=" menu__item">
+        <a class="menu__link menu__link--accent" href="./portfolio.html">Портфоліо</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link menu__link--accent" href="#">Контакти</a>
+      </li>
+    </ul>
+  
+    <!-- Контакты -->
+    <ul class="menu__contacts-list">
+      <li class="menu__contacts-list__item">
+        <a class="menu__contacts-list__link" href="tel:+380961111111">
+          <span>+38&nbsp;096&nbsp;111&nbsp;11&nbsp;11</span>
+        </a>
+      </li>
+      <li class="menu__contacts-list__item">
+        <a class="menu__contacts-list__link menu__contacts-list__link--style" href="mailto:info@devstudio.com">
+          <span>info@devstudio.com</span>
+        </a>
+      </li>
+    </ul>
+    
+    <ul class="social-list-menu">
+      <li class="social-list-menu__ltem">
+        <a class="social-list-menu__link" href="" aria-label="Instagram Link">
+          <span class="social-list-menu__link-text">Instagram</span> </a>
+      </li>
+      <li class="social-list-menu__ltem">
+        <a class="social-list-menu__link" href="" aria-label="Twitter Link">
+          <span class="social-list-menu__link-text">Twitter</span></a>
+      </li>
+      <li class="social-list-menu__ltem">
+        <a class="social-list-menu__link" href="" aria-label="Facebook Link">
+          <span class="social-list-menu__link-text">Facebook</span></a>
+      </li>
+      <li class="social-list-menu__ltem">
+        <a class="social-list-menu__link" href="" aria-label="Linkedin Link">
+          <span class="social-list-menu__link-text social-list-menu__link-text--not-border">Linkedin</span></a>
+      </li>
+    </ul>
+  </div>
 
 
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

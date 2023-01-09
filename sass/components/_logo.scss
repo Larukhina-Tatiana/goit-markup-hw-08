@@ -8,7 +8,9 @@
     $color: $accent-color
   );
   background: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 
 .header__logo {

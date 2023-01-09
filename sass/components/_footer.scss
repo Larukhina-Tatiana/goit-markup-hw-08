@@ -36,11 +36,14 @@
 
     &__wrapper {
         width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
         text-align: center;
         width: 100%;
         gap: 20px;
-        display: flex;
-        flex-flow: column;
+        
 
         @media screen and (min-width: $tablet) {
             width: 45%;
