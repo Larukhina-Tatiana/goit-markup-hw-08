@@ -3,16 +3,14 @@
     top: 0;
     left: 0;
     bottom: 0;
-    // width: 100vw;
-    width: 100%;
-    // height: 100vw;
+    width: 100vw;
+    // width: 100%;
     height: 100%;
 
     padding: 10px 10px;
 
     background-color: $white;
     z-index: 2;
-    // background-color: brown;
 
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
@@ -22,106 +20,13 @@
     }
 
     & .menu-toggle {
-        position: absolute;
-        top: 10px;
-        right: 15px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
     }
 }
 
-.menu {
-    // padding: 28px 20px;
-    margin-bottom: 100px;
-
-    &__link {
-        display: inline-block;
-        @include font-style($font-weight: 500, $font-size: 10vw, $line-height: calc(14/8), $letter-spacing: 0.02em, $color: $title-text-color);
-        padding-top: 10px;
-        padding-bottom: 10px;
-
-        &--active,
-        &--accent:hover,
-        &--accent:focus {
-            color: $accent-color;
-        }
-    }
-
-    &__item {
-        margin-bottom: 10px;
-    }
-
-    &__contacts-list {
-        // padding: 0 28px;
-        display: flex;
-        flex-flow: column;
-        gap: 32px;
-        margin-bottom: 64px;
-
-        &__link {
-            @include font-style($font-weight: 500, $font-size: 10vw, $line-height: calc(36/28), $letter-spacing: 0.02em, $color: $accent-color);
-            @include transition($transition-property: color);
-
-            &--style {
-                font-size: 5vw;
-                color: $priority-text-color;
-            }
-
-            &--accent,
-            &:hover,
-            &:focus {
-                color: $accent-color;
-            }
-        }
-
-        
-        @media screen and (min-width: 769px) {
-            display: flex;
-            flex-flow: column;
-            gap: 10px;
-            align-items: flex-start;
-
-            &__link {
-                display: inline-flex;
-                align-items: center;
-                gap: 10px;
-                @include font-style($font-weight: 500, $font-size: 12px, $line-height: calc(14/12), $letter-spacing: 0.02em, $color: $priority-text-color);
-            }
-        }
-
-        @media screen and (min-width: 1200px) {
-
-            margin-left: auto;
-            gap: 30px;
-            flex-flow: row;
-
-            &__link {
-                padding-top: 32px;
-                padding-bottom: 32px;
-                @include font-style($font-weight: 500, $font-size: 14px, $line-height: calc(16px /14px), $letter-spacing: 0.02em, $color: $priority-text-color);
-            }
-        }
-    }
-
-
-
-    @media (min-width: 768px) {
-        .menu-toggle {
-            display: none;
-        }
-    }
-
-
-}
-
-// .menu__item:last-child {
-//     margin-bottom: 50px;
-// }
-
-
-// .menu .link:hover,
-// .menu .link:focus {
-//     text-decoration: underline;
-// }
-
+// Кнопки бургера
 .menu-toggle {
     min-height: 40px;
     min-width: 40px;
@@ -147,6 +52,51 @@
     }
 }
 
+
+//  Ul Студия портфолио контакты
+.menu {
+    margin-bottom: 200px;
+
+    &__item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        display: inline-block;
+        @include font-style($font-weight: 500, $font-size: 10vw, $line-height: calc(14/8), $letter-spacing: 0.02em, $color: $title-text-color);
+
+        &--active,
+        &--accent:hover,
+        &--accent:focus {
+            color: $accent-color;
+        }
+    }
+
+    // Контакты
+    &__contacts-list {
+        display: flex;
+        flex-flow: column;
+        gap: 32px;
+        margin-bottom: 64px;
+
+        &__link {
+            @include font-style($font-weight: 500, $font-size: 10vw, $line-height: calc(36/28), $letter-spacing: 0.02em, $color: $accent-color);
+            @include transition($transition-property: color);
+
+            &--style {
+                font-size: 5vw;
+                color: $priority-text-color;
+            }
+
+            &--accent,
+            &:hover,
+            &:focus {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
 @media (min-width: 768px) {
     .menu-toggle {
         display: none;
@@ -155,57 +105,34 @@
 
 
 
-
-// .menu-toggle:hover,
-// .menu-toggle:focus {
-//     background-color: rgba(0, 0, 0, 0.1);
-// }
-
-@media (min-width: 768px) {
+@media screen and (min-width: 481px) {
     .menu-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        // width: 100vw;
-        width: 100%;
-        // height: 796px;
-        height: 100vh;
         padding: 48px 40px;
-        background-color: $white;
-        z-index: 2;
-
-        transform: translateX(100%);
-        transition: transform 250ms ease-in-out;
     }
 
-    .menu-container.is-open {
-        transform: translateX(0);
-    }
+    .menu {
+        margin-bottom: 130px;
 
-    // .menu-container .menu-toggle {
-    //     position: absolute;
-    //     top: 10px;
-    //     right: 15px;
-    //     //   color: #fff;
-    // }
+        &__item:not(:last-child) {
+            margin-bottom: 32px;
+
+        }
+
+        &__link {
+            @include font-style($font-family: null, $font-weight: null, $font-size: 40px, $line-height: calc(47/40), $letter-spacing: null, $color: null);
+        }
+
+        &__contacts-list {
+
+            &__link {
+                @include font-style($font-family: null, $font-weight: null, $font-size: 34px, $line-height: calc(40/34), $letter-spacing: null, $color: null, $background-color: null);
+
+                &--style {
+                    font-size: 24px;
+                    color: $priority-text-color;
+                    line-height: calc(28/24);
+                }
+            }
+        }
+    }
 }
-
-
-
-
-// .mobile-menu {
-//     padding: 0;
-//     margin: 0;
-//     // list-style: none;
-// }
-
-// .mobile-menu .link {
-//     display: block;
-//     padding: 10px;
-//     @include font-style($font-family: "Roboto",
-//         $font-weight: 500,
-//         $font-size: 40px,
-//         $line-height: calc(47 / 40),
-//         $letter-spacing: 0.02em,
-//         $color: $title-text-color );
-// }

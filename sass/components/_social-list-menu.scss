@@ -1,37 +1,38 @@
 .social-list-menu {
     display: flex;
-    // justify-content: space-evenly;
     gap: 5px;
-    // height: 148px;
-    // margin-top: 64px;
-    // margin-left: -20px;
-    // padding-left: 20px;
-   
+
+    &__ltem:not(:last-child) {
+        padding-left: 9px;
+        padding-right: 9px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__ltem:last-child {
+        padding-left: 9px;
+    }
+
+    &__ltem:first-child {
+        padding-left: 0;
+    }
 
     &__link {
+        display: inline-block;
         @include font-style($font-weight: 500,
             $font-size: 4vw,
             $line-height: calc(20 / 14),
             $letter-spacing: 0.02em,
             $color: $accent-color );
-
-        background: $page-background;
-        
-        @include transition($transition-property: background);
-
-        &-text {
-            padding-left: 10px;
-            padding-right: 10px;
-            border-right: 1px solid rgba(33, 33, 33, 0.2);
-
-            &--not-border {
-                padding-right: 0px;
-                border-right: none;
-            }
-        }
     }
 
-   
+    @media screen and (min-width: 481px) {
 
-  
+        &__link {
+            @include font-style($font-weight: null,
+                $font-size: 18px,
+                $line-height: calc(22/18),
+                $letter-spacing: null,
+                $color: null);
+        }
+    }
 }
