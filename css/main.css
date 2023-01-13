@@ -232,6 +232,7 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: space-between;
 }
 @media screen and (max-width: 768px) {
   .nav__list {
@@ -1095,4 +1096,97 @@ body {
 }
 .btn-send--for-modal:hover, .btn-send--for-modal:focus {
   background: #188ce8;
+}
+
+.project__item {
+  background: #ffffff;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.project__item:hover, .project__item:focus {
+  border: 1px solid #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.project__item:hover .project__description-text, .project__item:focus .project__description-text {
+  transform: translateY(0);
+}
+.project__link {
+  display: block;
+  text-decoration: none;
+  list-style: none;
+  color: #757575;
+}
+.project__link:visited, .project__link {
+  font-size: 16px;
+  line-height: 1.87;
+}
+.project__description-container {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.project__description-text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(calc(100% + 1px));
+  /* transform: translateY(100%); */
+  font-size: 18px;
+  line-height: 1.5555555556;
+  padding: 63px 24px;
+  color: #ffffff;
+  background-color: #2196f3;
+}
+.project__caption {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+.project__title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+  margin-bottom: 4px;
+}
+.project__text {
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+@media screen and (min-width: 769px) {
+  .project {
+    display: flex;
+    flex-flow: wrap;
+    gap: 30px;
+  }
+  .project__item {
+    width: 354px;
+  }
+  .project__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .project__item:nth-child(-n+2) .project__caption {
+    height: 146px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project {
+    width: 1170px;
+  }
+  .project__item {
+    width: 370px;
+    margin-bottom: 0;
+  }
+  .project__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

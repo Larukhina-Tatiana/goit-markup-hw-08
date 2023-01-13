@@ -1,12 +1,15 @@
 .project {
-    flex-wrap: wrap;
 
     &__item {
-        width: calc((100% - 60px) / 3);
-        margin-right: 30px;
-        margin-bottom: 30px;
         background: $page-background;
         @include transition ($transition-property: (border, box-shadow, background));
+
+
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
     }
 
     &__item:hover,
@@ -18,15 +21,6 @@
     &__item:hover &__description-text,
     &__item:focus &__description-text {
         transform: translateY(0);
-    }
-
-    /* Каждый третий */
-    &__item:nth-child(3n) {
-        margin-right: 0;
-    }
-
-    &_item:nth-last-child(-n + 3) {
-        margin-bottom: 0;
     }
 
     &__link {
@@ -76,7 +70,7 @@
 
     &__title {
         font-size: 18px;
-        line-height: 2;
+        line-height: calc(36/18);
         letter-spacing: 0.06em;
         color: $title-text-color;
         margin-bottom: 4px;
@@ -84,6 +78,134 @@
 
     &__text {
         font-size: 16px;
-        line-height: 1.87;
+        line-height: calc(30/16);
     }
 }
+
+@media screen and (min-width: 769px) {
+    .project {
+        display: flex;
+        flex-flow: wrap;
+        gap: 30px;
+
+
+        &__item {
+
+            // width: calc((100% - (4*15px)) / 2);
+            width: 354px;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(-n + 2) {
+                .project__caption {
+                    height: 146px;
+                }
+            }
+        }
+
+        
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .project {
+        width: 1170px;
+
+        &__item {
+            // width: calc((100% - (6*15px)) / 3);
+            width: 370px;
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+
+
+        }
+
+        // &__title {
+        //     width: 322px;
+        // }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//     /* Каждый третий */
+//     &__item:nth-child(3n) {
+//         margin-right: 0;
+//     }
+
+//     &_item:nth-last-child(-n + 3) {
+//         margin-bottom: 0;
+//     }
+
+//     &__link {
+//         display: block;
+
+//     }
+
+//     &__link:visited,
+//     &__link {
+//         font-size: 16px;
+//         line-height: 1.87;
+//     }
+
+//     &__description-container {
+//         position: relative;
+//         cursor: pointer;
+//         overflow: hidden;
+//     }
+
+//     &__description-text {
+//         position: absolute;
+//         height: 100%;
+//         width: 100%;
+
+//         left: 0;
+//         top: 0;
+//         @include transition ($transition-property: transform);
+//         transform: translateY(calc(100% + 1px));
+//         /* transform: translateY(100%); */
+
+//         font-size: 18px;
+//         line-height: calc(28 / 18);
+//         padding: 63px 24px;
+
+//         color: $white;
+//         background-color: $accent-color;
+//     }
+
+//     &__caption {
+//         padding: 20px 24px;
+//         border-right: 1px solid $project-border;
+//         border-left: 1px solid $project-border;
+//         border-bottom: 1px solid $project-border;
+//     }
+
+//     &__title {
+//         font-size: 18px;
+//         line-height: 2;
+//         letter-spacing: 0.06em;
+//         color: $title-text-color;
+//         margin-bottom: 4px;
+//     }
+
+//     &__text {
+//         font-size: 16px;
+//         line-height: 1.87;
+//     }
+// }

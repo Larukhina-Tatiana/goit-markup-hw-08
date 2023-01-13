@@ -21,11 +21,23 @@
   <body>
     <header class="header">
       <!-- шапка меню-->
-      <div class="container flex">
+      <div class="container">
         <nav class="nav flex">
           <a class="logo" href="./index.html" lang="en"
             >Web<span class="logo header__logo">Studio</span></a
           >
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="nav__icon-menu"
+                href="./images/icons/new/symbol-defs (1).svg#icon-menu_40px"
+              ></use>
+            </svg>
+          </button>
           <ul class="nav__list flex">
             <li class="nav__item nav__item--position-relative">
               <a class="nav__link nav__link--accent" href="./index.html"
@@ -97,17 +109,79 @@
 
           <!-- Список проектов -->
           <!-- <div class="flex-container"> -->
-          <ul class="project flex">
+          <ul class="project">
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/technocrack-website.jpg"
-                    alt="Приклад веб-сайту Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-1@1x.webp 370w,
+                        ./images/portfolio/d-project-1@2x.webp 740w,
+                        ./images/portfolio/d-project-1@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-1@1x.jpg 370w
+                    ./images/portfolio/d-project-1@2x.jpg 740w,
+                    ./images/portfolio/d-project-1@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-1@1x.webp 354w,
+                        ./images/portfolio/t-project-1@2x.webp 708w,
+                        ./images/portfolio/t-project-1@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 769px) 354px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-1@1x.jpg 370w
+                    ./images/portfolio/t-project-1@2x.jpg 740w,
+                    ./images/portfolio/t-project-1@3x.jpg 1110w
+                  "
+                  media="(min-width: 769px)"
+                  sizes="(min-width: 768px) 354px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-1@1x.webp 450w,
+                        ./images/portfolio/m-project-1@2x.webp 900w,
+                        ./images/portfolio/m-project-1@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-1@1x.jpg 370w
+                    ./images/portfolio/m-project-1@2x.jpg 740w,
+                    ./images/portfolio/m-project-1@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-1@1x.jpg"
+                      alt="Веб-сайт Технокряк"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -127,13 +201,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/poster.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-2@1x.webp 370w,
+                        ./images/portfolio/d-project-2@2x.webp 740w,
+                        ./images/portfolio/d-project-2@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-2@1x.jpg 370w
+                    ./images/portfolio/d-project-2@2x.jpg 740w,
+                    ./images/portfolio/d-project-2@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-2@1x.webp 354w,
+                        ./images/portfolio/t-project-2@2x.webp 708w,
+                        ./images/portfolio/t-project-2@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-2@1x.jpg 370w
+                    ./images/portfolio/t-project-2@2x.jpg 740w,
+                    ./images/portfolio/t-project-2@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-2@1x.webp 450w,
+                        ./images/portfolio/m-project-2@2x.webp 900w,
+                        ./images/portfolio/m-project-2@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-2@1x.jpg 370w
+                    ./images/portfolio/m-project-2@2x.jpg 740w,
+                    ./images/portfolio/m-project-2@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-2@1x.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -156,13 +292,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/restaurant.jpg"
-                    alt="Додаток Ресторан Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-3@1x.webp 370w,
+                        ./images/portfolio/d-project-3@2x.webp 740w,
+                        ./images/portfolio/d-project-3@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-3@1x.jpg 370w
+                    ./images/portfolio/d-project-3@2x.jpg 740w,
+                    ./images/portfolio/d-project-3@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-3@1x.webp 354w,
+                        ./images/portfolio/t-project-3@2x.webp 708w,
+                        ./images/portfolio/t-project-3@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-3@1x.jpg 370w
+                    ./images/portfolio/t-project-3@2x.jpg 740w,
+                    ./images/portfolio/t-project-3@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-3@1x.webp 450w,
+                        ./images/portfolio/m-project-3@2x.webp 900w,
+                        ./images/portfolio/m-project-3@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-3@1x.jpg 370w
+                    ./images/portfolio/m-project-3@2x.jpg 740w,
+                    ./images/portfolio/m-project-3@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-3@1x.jpg"
+                      alt="Додаток Ресторан Seafood"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -184,13 +382,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/prime-project.jpg"
-                    alt="Проєкт Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-4@1x.webp 370w,
+                        ./images/portfolio/d-project-4@2x.webp 740w,
+                        ./images/portfolio/d-project-4@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-4@1x.jpg 370w
+                    ./images/portfolio/d-project-4@2x.jpg 740w,
+                    ./images/portfolio/d-project-4@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-4@1x.webp 354w,
+                        ./images/portfolio/t-project-4@2x.webp 708w,
+                        ./images/portfolio/t-project-4@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-4@1x.jpg 370w
+                    ./images/portfolio/t-project-4@2x.jpg 740w,
+                    ./images/portfolio/t-project-4@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-4@1x.webp 450w,
+                        ./images/portfolio/m-project-4@2x.webp 900w,
+                        ./images/portfolio/m-project-4@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-4@1x.jpg 370w
+                    ./images/portfolio/m-project-4@2x.jpg 740w,
+                    ./images/portfolio/m-project-4@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-4@1x.jpg"
+                      alt="Проєкт Prime"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -213,13 +473,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/project-boxes.jpg"
-                    alt="Проєкт Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-5@1x.webp 370w,
+                        ./images/portfolio/d-project-5@2x.webp 740w,
+                        ./images/portfolio/d-project-5@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-5@1x.jpg 370w
+                    ./images/portfolio/d-project-5@2x.jpg 740w,
+                    ./images/portfolio/d-project-5@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-5@1x.webp 354w,
+                        ./images/portfolio/t-project-5@2x.webp 708w,
+                        ./images/portfolio/t-project-5@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-5@1x.jpg 370w
+                    ./images/portfolio/t-project-5@2x.jpg 740w,
+                    ./images/portfolio/t-project-5@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-5@1x.webp 450w,
+                        ./images/portfolio/m-project-5@2x.webp 900w,
+                        ./images/portfolio/m-project-5@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-5@1x.jpg 370w
+                    ./images/portfolio/m-project-5@2x.jpg 740w,
+                    ./images/portfolio/m-project-5@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-5@1x.jpg"
+                      alt="Проєкт Boxes"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -242,13 +564,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/inspiration-has-no-borders.jpg"
-                    alt="Веб-сайт Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-6@1x.webp 370w,
+                        ./images/portfolio/d-project-6@2x.webp 740w,
+                        ./images/portfolio/d-project-6@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-6@1x.jpg 370w
+                    ./images/portfolio/d-project-6@2x.jpg 740w,
+                    ./images/portfolio/d-project-6@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-6@1x.webp 354w,
+                        ./images/portfolio/t-project-6@2x.webp 708w,
+                        ./images/portfolio/t-project-6@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-6@1x.jpg 370w
+                    ./images/portfolio/t-project-6@2x.jpg 740w,
+                    ./images/portfolio/t-project-6@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-6@1x.webp 450w,
+                        ./images/portfolio/m-project-6@2x.webp 900w,
+                        ./images/portfolio/m-project-6@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-6@1x.jpg 370w
+                    ./images/portfolio/m-project-6@2x.jpg 740w,
+                    ./images/portfolio/m-project-6@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-6@1x.jpg"
+                      alt="Веб-сайт Inspiration has no Borders"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -271,13 +655,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/limited-edition.jpg"
-                    alt="Видання Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-7@1x.webp 370w,
+                        ./images/portfolio/d-project-7@2x.webp 740w,
+                        ./images/portfolio/d-project-7@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-7@1x.jpg 370w
+                    ./images/portfolio/d-project-7@2x.jpg 740w,
+                    ./images/portfolio/d-project-7@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-7@1x.webp 354w,
+                        ./images/portfolio/t-project-7@2x.webp 708w,
+                        ./images/portfolio/t-project-7@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-7@1x.jpg 370w
+                    ./images/portfolio/t-project-7@2x.jpg 740w,
+                    ./images/portfolio/t-project-7@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-7@1x.webp 450w,
+                        ./images/portfolio/m-project-7@2x.webp 900w,
+                        ./images/portfolio/m-project-7@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-7@1x.jpg 370w
+                    ./images/portfolio/m-project-7@2x.jpg 740w,
+                    ./images/portfolio/m-project-7@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-7@1x.jpg"
+                      alt="Видання Limited Edition"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -300,13 +746,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/lab.jpg"
-                    alt="Проєкт LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-8@1x.webp 370w,
+                        ./images/portfolio/d-project-8@2x.webp 740w,
+                        ./images/portfolio/d-project-8@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-8@1x.jpg 370w
+                    ./images/portfolio/d-project-8@2x.jpg 740w,
+                    ./images/portfolio/d-project-8@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-8@1x.webp 354w,
+                        ./images/portfolio/t-project-8@2x.webp 708w,
+                        ./images/portfolio/t-project-8@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-8@1x.jpg 370w
+                    ./images/portfolio/t-project-8@2x.jpg 740w,
+                    ./images/portfolio/t-project-8@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-8@1x.webp 450w,
+                        ./images/portfolio/m-project-8@2x.webp 900w,
+                        ./images/portfolio/m-project-8@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-8@1x.jpg 370w
+                    ./images/portfolio/m-project-8@2x.jpg 740w,
+                    ./images/portfolio/m-project-8@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-8@1x.jpg"
+                      alt="Проєкт LAB"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -329,13 +837,75 @@
             <li class="project__item">
               <a class="project__link" href="">
                 <div class="project__description-container">
-                  <img
-                    class="project__img"
-                    src="./images/portfolio/growing-business.jpg"
-                    alt="Додаток Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <!-- ПК -->
+                    <source
+                      srcset="
+                        ./images/portfolio/d-project-9@1x.webp 370w,
+                        ./images/portfolio/d-project-9@2x.webp 740w,
+                        ./images/portfolio/d-project-9@3x.webp 1110w
+                      "
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/d-project-9@1x.jpg 370w
+                    ./images/portfolio/d-project-9@2x.jpg 740w,
+                    ./images/portfolio/d-project-9@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Планшет -->
+                <source
+                      srcset="
+                        ./images/portfolio/t-project-9@1x.webp 354w,
+                        ./images/portfolio/t-project-9@2x.webp 708w,
+                        ./images/portfolio/t-project-9@3x.webp 1062w
+                      "
+                      type="image/webp"
+                      media="(min-width: 769px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/t-project-9@1x.jpg 370w
+                    ./images/portfolio/t-project-9@2x.jpg 740w,
+                    ./images/portfolio/t-project-9@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                <!-- Мобильный -->
+                <source
+                      srcset="
+                        ./images/portfolio/m-project-9@1x.webp 450w,
+                        ./images/portfolio/m-project-9@2x.webp 900w,
+                        ./images/portfolio/m-project-9@3x.webp 1350w
+                      "
+                      type="image/webp"
+                      media="(min-width: 481px)"
+                      sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px"
+                    />
+                    <source
+                  srcset="
+                    ./images/portfolio/m-project-9@1x.jpg 370w
+                    ./images/portfolio/m-project-9@2x.jpg 740w,
+                    ./images/portfolio/m-project-9@3x.jpg 1110w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                />
+                    <img
+                      class="project__img"
+                      src="./images/portfolio/d-project-9@1x.jpg"
+                      alt="Додаток Growing Business"
+                      width="370"
+                    />
+                  </picture>
+                  
                   <div class="project__description-text flex">
                     <p>
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -362,55 +932,86 @@
     <!-- Подвал -->
     <footer class="footer">
       <div class="container footer__container">
-        <div class="fotter__wrapper">
-          <a class="logo" href="./index.html" lang="en">Web<span class="footer__logo">Studio</span></a>
+        <!-- Контакты -->
+        <div class="footer__wrapper">
+          <a class="logo" href="./index.html" lang="en"
+            >Web<span class="footer__logo">Studio</span></a
+          >
           <address class="address">
             <ul class="address__list">
               <li class="address__item">
-                <a class="address__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
-                  rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
+                <a
+                  class="address__link"
+                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
               </li>
               <li class="address__item address__item--margin-top">
-                <a class="address__link address__link--color" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a
+                  class="address__link address__link--footer-color"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li class="address__item address__item--margin-top">
-                <a class="address__link address__link--color" href="tel:+380961111111">+38 096 111 11 11</a>
+                <a
+                  class="address__link address__link--footer-color"
+                  href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
-  
-        <!-- Приєднуйтесь -->
-  
-        <div class="fotter__wrapper">
+
+        <!--  Приєднуйтесь -->
+
+        <div class="footer__wrapper">
           <p class="footer__text">Приєднуйтесь</p>
-  
-          <ul class="social-list flex">
-  
+
+          <ul class="social-list">
             <li class="social-list__ltem">
-              <a class="social-list__link social-list__link--bg" href="" aria-label="Instagram Link">
+              <a
+                class="social-list__link social-list__link--bg"
+                href=""
+                aria-label="Instagram Link"
+              >
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-instagram-w"></use>
                 </svg>
               </a>
             </li>
-  
+
             <li class="social-list__ltem">
-              <a class="social-list__link social-list__link--bg" href="" aria-label="Twitter Link">
+              <a
+                class="social-list__link social-list__link--bg"
+                href=""
+                aria-label="Twitter Link"
+              >
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-twitter-w"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__ltem">
-              <a class="social-list__link social-list__link--bg" href="" aria-label="Facebook Link">
+              <a
+                class="social-list__link social-list__link--bg"
+                href=""
+                aria-label="Facebook Link"
+              >
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-facebook-w"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__ltem">
-              <a class="social-list__link social-list__link--bg" href="" aria-label="Linkedin Link">
+              <a
+                class="social-list__link social-list__link--bg"
+                href=""
+                aria-label="Linkedin Link"
+              >
                 <svg width="20" height="20">
                   <use href="./images/icons/icons.svg#icon-linkedin-w"></use>
                 </svg>
@@ -418,17 +1019,24 @@
             </li>
           </ul>
         </div>
-  
-        <div class="fotter_wrapper">
+
+        <div class="footer__wrapper-form">
           <p class="footer__text">Підпишіться на розсилку</p>
-            <!-- Форма с email -->
-  
-          <form class="form-mail flex" name="footer-mail"  novalidate>
+          <!-- Форма с email -->
+
+          <form class="form-mail" name="footer-mail" novalidate>
             <label class="form-mail__label" for="user_email"></label>
-            <input class="form-mail__input" type="email" name="email" id="user_email" placeholder="E-mail" required>
-  
-            <button class="button btn-send flex" type="submit"><span class="btn-send__text">
-                Підписатися</span>
+            <input
+              class="form-mail__input"
+              type="email"
+              name="email"
+              id="user_email"
+              placeholder="E-mail"
+              required
+            />
+
+            <button class="button btn-send" type="submit">
+              <span class="btn-send__text"> Підписатися</span>
               <svg class="btn-send__icon" width="24" height="24">
                 <use href="./images/icons/icons.svg#icon-icon-send"></use>
               </svg>
