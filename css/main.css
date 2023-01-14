@@ -119,6 +119,17 @@ body {
   position: relative;
   border-bottom: 1px solid #ececec;
 }
+@media screen and (min-width: 768px) {
+  .header__menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header__menu {
+    display: flex;
+  }
+}
 
 .hero {
   margin-left: auto;
@@ -1189,6 +1200,9 @@ body {
   .project__item:not(:last-child) {
     margin-bottom: 0;
   }
+  .project .project__item:nth-child(-n+2) .project__caption {
+    height: auto;
+  }
 }
 .buttons {
   display: flex;
@@ -1225,12 +1239,13 @@ body {
   .buttons {
     flex-flow: nowrap;
     width: 575px;
-  }
-}
-@media screen and (min-width: 769px) {
-  .buttons {
-    flex-flow: nowrap;
+    justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .buttons {
+    flex-flow: nowrap;
   }
 }/*# sourceMappingURL=main.css.map */

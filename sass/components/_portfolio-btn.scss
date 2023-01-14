@@ -45,13 +45,16 @@
     .buttons {
     flex-flow: nowrap;
     width: 575px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
     .buttons {
     flex-flow: nowrap;
-    margin-left: auto;
-    margin-right: auto;
+    
+
     }
 }

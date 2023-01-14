@@ -2,8 +2,25 @@
     position: relative;
     border-bottom: 1px solid $borders-color;
 
-    
+    @media screen and (min-width: 768px) {
+
+        &__menu {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        &__menu {
+            display: flex;
+
+        }
+    }
+
+
 }
+
+
 
 
 .hero {
@@ -33,11 +50,12 @@
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: $hero;
+
         @media screen and (max-width: 481px) {
             font-weight: 700;
-        font-size: 20px;
-        line-height: calc(30/20);
-        letter-spacing: 0.04em;
+            font-size: 20px;
+            line-height: calc(30/20);
+            letter-spacing: 0.04em;
         }
     }
 
