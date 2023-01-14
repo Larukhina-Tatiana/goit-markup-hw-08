@@ -91,7 +91,7 @@ ul {
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1200px;
   }
 }
 
@@ -533,49 +533,9 @@ body {
 
 .features-list {
   padding-bottom: 0;
+  /* Иконки секции Особливості через SVG*/
   /* Заголовки h3 Секции "Особенности"*/
   /* текст Секции "Особенности" */
-  /* Иконки секции Особливості через SVG*/
-}
-@media screen and (min-width: 768px) {
-  .features-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .features-list__item {
-    flex-basis: calc((100% - 30px) / 2);
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .features-list {
-    flex-wrap: nowrap;
-    gap: 30px;
-  }
-}
-.features-list__item:not(:last-child) {
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .features-list__item:not(:last-child) {
-    width: 50%;
-  }
-}
-.features-list__subtitle {
-  margin-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #212121;
-}
-.features-list__text {
-  width: 450px;
-  line-height: 1.7142857143;
-}
-@media screen and (min-width: 768px) {
-  .features-list__text {
-    width: 100%;
-    height: 48px;
-  }
 }
 .features-list .wrapper-icon {
   display: flex;
@@ -586,8 +546,50 @@ body {
   margin-bottom: 30px;
   background-color: #f5f4fa;
 }
-
+.features-list__subtitle {
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.1428571429;
+  text-transform: uppercase;
+  color: #212121;
+}
+.features-list__text {
+  width: 450px;
+  line-height: 1.7142857143;
+}
 @media screen and (max-width: 767px) {
+  .features-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* текст Секции "Особенности" */
+  }
+  .features-list__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .features-list__subtitle {
+    text-align: start;
+  }
+  .features-list__text {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features-list {
+    flex-wrap: nowrap;
+  }
+  .features-list__item {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1199px) {
   .our-work {
     display: none;
   }
