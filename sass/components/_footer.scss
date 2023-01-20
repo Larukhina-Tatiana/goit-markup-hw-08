@@ -8,20 +8,16 @@
         align-items: center;
         text-align: center;
         flex-flow: column wrap;
-        // justify-content: left;
         gap: 60px;
 
         @media screen and (min-width: $tablet) {
             justify-content: space-around;
-            display: flex;
             flex-flow: row wrap;
             align-items: baseline;
         }
 
         @media screen and (min-width: $desctop) {
-            display: flex;
             flex-flow: unset;
-            align-items: baseline;
         }
     }
 
@@ -39,11 +35,7 @@
         display: flex;
         flex-flow: column;
         align-items: center;
-
-        text-align: center;
-        width: 100%;
         gap: 20px;
-        
 
         @media screen and (min-width: $tablet) {
             width: 45%;
@@ -54,10 +46,8 @@
             flex-flow: column;
             align-items: center;
             width: 100%;
-            // gap: 20px;
         }
     }
-
 }
 
 .address {

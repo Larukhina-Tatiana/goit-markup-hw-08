@@ -1,6 +1,7 @@
 .social-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 10px;
 
   &__link {
@@ -22,7 +23,6 @@
   &__link:hover,
   &__link:focus {
     background-color: $accent-color;
-    // color: $white;
     fill: $white;
   }
 

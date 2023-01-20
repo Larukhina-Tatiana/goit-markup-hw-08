@@ -18,7 +18,9 @@
 
     &__link {
         display: inline-block;
-        @include font-style($font-weight: 500,
+        @include font-style(
+            $font-family:'Roboto-Medium',
+            $font-weight: 500,
             $font-size: 4vw,
             $line-height: calc(20 / 14),
             $letter-spacing: 0.02em,
@@ -28,7 +30,9 @@
     @media screen and (min-width: 481px) {
 
         &__link {
-            @include font-style($font-weight: null,
+            @include font-style(
+            $font-family:'Roboto-Medium',
+            $font-weight: null,
                 $font-size: 18px,
                 $line-height: calc(22/18),
                 $letter-spacing: null,

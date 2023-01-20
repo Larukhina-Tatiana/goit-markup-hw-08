@@ -9,26 +9,17 @@
         gap: 30px;
     }
 
-
-
-    // justify-content: space-between;
-
     &__item {
         background: $page-background;
         box-shadow: $team-box-shadow;
         border-radius: 0px 0px 4px 4px;
         margin-bottom: 30px;
 
-        // @media screen and (min-width: $mobile) {
-        //     margin-bottom: 30px;
-        // }
-
         @media screen and (min-width: $tablet) {
             flex-basis: calc((100% - 30px) / 2);
         }
 
         @media screen and (min-width: $desctop) {
-            flex-wrap: nowrap;
             flex-basis: calc((100% - 90px) / 4);
         }
     }

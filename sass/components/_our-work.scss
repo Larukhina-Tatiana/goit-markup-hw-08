@@ -2,36 +2,32 @@
     @media screen and(max-width: 1199px) {
         display: none;
     }
+    &__list {
+        display:flex;
+        gap: 30px;
+    }
+    
+    &__container {
+        position: relative;
+        overflow: hidden;
+    }
+    &__text {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        height: 70px;
+    
+        left: 0;
+        bottom: 0;
 
-    // @media screen and(mix-width: 1200px) {
-        
-    // }
-
-}
-.our-work__list {
-    display:flex;
-    gap: 30px;
-}
-
-.our-work__container {
-    position: relative;
-    overflow: hidden;
-}
-.our-work__text {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 70px;
-
-    left: 0;
-    bottom: 0;
-
-    font-weight: 700;
-    line-height: calc(16 / 14);
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-
-    color: $white;
-    background-color: rgba(47, 48, 58, 0.8);
+        font-family:'Roboto';
+        font-weight: 700;
+        line-height: calc(16 / 14);
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    
+        color: $white;
+        background-color: rgba(47, 48, 58, 0.8);
+    }
 }

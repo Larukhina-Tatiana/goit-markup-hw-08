@@ -6,8 +6,10 @@
                 background,
             ));
 
-        &:not(:last-child) {
-            margin-bottom: 30px;
+        @media screen and(max-width: 767px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
         }
     }
 
@@ -81,49 +83,35 @@
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: $tablet) {
     .project {
         display: flex;
         flex-flow: wrap;
         gap: 30px;
 
         &__item {
-            // width: calc((100% - (4*15px)) / 2);
-            width: 354px;
+            flex-basis:  calc((100% - (1*30px)) / 2);
+            // width: 354px;
 
-            &:not(:last-child) {
-                margin-bottom: 0;
-            }
-
-            &:nth-child(-n + 2) {
-                .project__caption {
-                    height: 146px;
+            @media screen and(max-width: 1199px) {
+                &:nth-child(-n + 2) {
+                    .project__caption {
+                        height: 146px;
+                    }
                 }
             }
         }
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: $desctop) {
     .project {
-        width: 1170px;
 
         &__item {
-            // width: calc((100% - (6*15px)) / 3);
-            width: 370px;
-            margin-bottom: 0;
-
-            &:not(:last-child) {
-                margin-bottom: 0;
-            }
-        }
-
-        .project__item:nth-child(-n + 2) .project__caption {
-            height: auto;
-        }
-
-      
+            flex-basis: calc((100% - (2*30px)) / 3);
+            // width: 370px;
     }
+}
 }
 
 //     /* Каждый третий */

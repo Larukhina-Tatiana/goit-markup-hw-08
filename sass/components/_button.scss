@@ -11,7 +11,7 @@
     margin-left: auto;
     margin-right: auto;
     // padding: 10px 24px;??
-    @include font-style ($font-family: "Roboto", $font-weight: 700, $font-size: 16px, $line-height: calc(30 / 16), $letter-spacing: 0.06em, $background-color: none);
+    @include font-style ($font-family: null, $font-weight: 700, $font-size: 16px, $line-height: calc(30 / 16), $letter-spacing: 0.06em, $background-color: none);
     color: $logo-footer;
     border-radius: 4px;
     background-color: $accent-color;
@@ -23,10 +23,6 @@
 
     &:active {
         background: $hero-button-active;
-    }
-
-    @media screen and (min-width: 1200px) {
-        width: 216px;
     }
 }
 
@@ -63,7 +59,7 @@
 
     &__icon {
         fill: $page-background;
-        margin-left: 12px;
+        margin-left: 10px;
     }
 
     &--for-modal {
@@ -72,9 +68,7 @@
         /* display: inherit; */
         margin-left: auto;
         margin-right: auto;
-        // width: 200px;
-        // height: 50px;
-
+        
         // background: $accent-color;
         @include transition ($transition-property: background);
     }

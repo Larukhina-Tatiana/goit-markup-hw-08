@@ -5,10 +5,6 @@
     flex-flow: wrap;
     gap: 8px;
     width: 326px;
-    
-    // &__item:not(:first-child) {
-    //     margin-left: 8px;
-    // }
 }
 .portfolio-button {
     display: inline-block;
@@ -37,24 +33,14 @@
         background: $accent-color;
         box-shadow: $portfolio-box-shadow;
     }
-
-    
-
 }
-@media screen and (min-width: 769px) {
+
+@media screen and (min-width: 768px) {
     .buttons {
     flex-flow: nowrap;
     width: 575px;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .buttons {
-    flex-flow: nowrap;
-    
-
     }
 }
