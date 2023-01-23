@@ -11,7 +11,6 @@
     }
   }
 
-  
 
   &__link {
     @include font-style($font-weight: 500, $line-height: calc(16/14), $letter-spacing: 0.02em, $color: $title-text-color);
@@ -38,6 +37,22 @@
   &__item--position-relative {
     display: inline-block;
     position: relative;
+  }
+
+  @media screen and (min-width: 768px) {
+
+    &__list {
+      display: flex;
+      flex-flow: nowrap;
+      gap: 50px;
+      margin-left: 91px;
+    }
+
+    &__link {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 }
 
@@ -82,45 +97,3 @@
 
 
 // }
-
-
-@media screen and (min-width: 768px) {
-
-  .mob-menu {
-    display: none;
-  }
-
-  .nav {
-    align-items: center;
-    justify-content: space-between;
-
-    &__list {
-      display: flex;
-      flex-flow: nowrap;
-      gap: 50px;
-      margin-left: 91px;
-    }
-
-    &__link {
-      display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-    }
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .nav {
-
-    &__list {
-      gap: 50px;
-      margin-left: 91px;
-    }
-
-    &__link {
-      display: block;
-      padding-top: 32px;
-      padding-bottom: 32px;
-    }
-  }
-}

@@ -1,21 +1,21 @@
 .logo {
-  @include font-style(
-    $font-family: "Raleway-Bold",
+  @include font-style($font-family: "Raleway-Bold",
     $font-weight: 700,
     $font-size: 24px,
     $line-height: calc(28 / 24),
     $letter-spacing: 0.03em,
-    $color: $accent-color
-  );
+    $color: $accent-color );
   background: none;
   display: flex;
   align-items: center;
-  height: 60px;
 }
 
 .header__logo {
   color: $logo-header;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
+
 
 .footer__logo {
   color: $logo-footer;
@@ -28,10 +28,7 @@
   //   margin: 16px 0;
   // }
 
-  .header__logo {
-    color: $logo-header;
-  }
-
+  
   .footer__logo {
     color: $logo-footer;
     background: $hero-footer-background;

@@ -34,4 +34,15 @@
     // fill: $clients;
     @include transition($transition-property: fill);
   }
+
+  @media screen and (min-width: $desctop) {
+    justify-content: center;
+  }
+}
+
+.social-list--footer-jc-start {
+  @media screen and (min-width: $desctop) {
+    justify-content: flex-start;
+  }
+  
 }

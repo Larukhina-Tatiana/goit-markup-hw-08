@@ -14,13 +14,17 @@
             justify-content: space-around;
             flex-flow: row wrap;
             align-items: baseline;
+            
         }
 
         @media screen and (min-width: $desctop) {
             flex-flow: unset;
+            text-align: left;
+            justify-content: left;
+            gap: 70px;
+            align-items: baseline;
         }
     }
-
 
     &__text {
         text-align: center;
@@ -28,17 +32,30 @@
         line-height: calc(16 / 14);
         text-transform: uppercase;
         color: $hero;
+
+        @media screen and (min-width: $desctop) {
+            text-align: left;
+        }
     }
 
     &__wrapper {
         width: 100%;
         display: flex;
         flex-flow: column;
-        align-items: center;
         gap: 20px;
+        align-items: center;
 
         @media screen and (min-width: $tablet) {
+            text-align: center;
             width: 45%;
+
+        }
+
+        @media screen and (min-width: $desctop) {
+            text-align: left;
+            align-items: unset;
+            // width: 45%;??
+
         }
 
         &-form {
@@ -46,15 +63,27 @@
             flex-flow: column;
             align-items: center;
             width: 100%;
+
+            @media screen and (min-width: $desctop) {
+                flex-flow: column;
+                align-items: flex-start;
+            }
         }
     }
 }
 
-.address {
-    margin-top: 4px;
 
-    &__item--margin-top {
-        margin-top: 8px;
+.address {
+    @media screen and (max-width: $desctop) {
+        &__item:not(:first-child) {
+            margin-top: 8px;
+        }
+    }
+
+    @media screen and (min-width: $desctop) {
+        &__item:not(:first-child) {
+            margin-top: 9px;
+        }
     }
 
     &__link {

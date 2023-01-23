@@ -9,9 +9,18 @@
     width: 450px;
   }
 
-  &__input {
+  @media screen and (min-width: $desctop) {
     width: 100%;
+    flex-flow: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  &__input {
     height: 50px;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
@@ -25,5 +34,12 @@
       transition-property: border;
       @include transition();
     }
+  }
+
+  &__label {
+    @media screen and (min-width: $desctop) {
+      margin-left: -15px;
+    }
+
   }
 }

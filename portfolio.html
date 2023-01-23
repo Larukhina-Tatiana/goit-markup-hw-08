@@ -6,61 +6,115 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Портфоліо</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" /> -->
   <link rel="stylesheet" href="./css/main.min.css" />
 </head>
 
 <body>
   <header class="header">
-    <!-- шапка меню-->
-    <div class="container">
-      <div class="header__menu">
-        <nav class="nav">
-          <a class="logo" href="./index.html" lang="en">Web<span class="logo header__logo">Studio</span></a>
-          <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+    <!-- шапка меню -->
+    <div class="container header__container">
+      <nav class="nav">
+
+        <a class="logo" href="./index.html" lang="en">Web<span class="logo header__logo">Studio</span></a>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="nav__icon-menu" href="./images/icons/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
             <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-              <use class="nav__icon-menu" href="./images/icons/new/symbol-defs (1).svg#icon-menu_40px"></use>
+              <use class="menu-toggle__icon-cross" href="./images/icons/icons.svg#icon-close_40px"></use>
             </svg>
           </button>
-          
-          <ul class="nav__list flex">
-            <li class="nav__item nav__item--position-relative">
-              <a class="nav__link nav__link--accent" href="./index.html">Студія</a>
+
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active" href="./index.html">Студія</a>
             </li>
-            <li class="nav__item nav__item--position-relative">
-              <a class="nav__link nav__link--accent nav__link--active nav__link--after"
-                href="./portfolio.html">Портфоліо</a>
+            <li class="menu__item">
+              <a class="menu__link menu__link--accent" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link nav__link--accent" href="#">Контакти</a>
+            <li class="menu__item">
+              <a class="menu__link menu__link--accent" href="#">Контакти</a>
             </li>
           </ul>
-        </nav>
-        <!-- Контакты -->
-        <ul class="contacts-list flex">
-          <li class="contacts-list__item">
-            <a class="contacts-list__link contacts-list__link--accent" href="mailto:info@devstudio.com">
-              <svg class="contacts-list__icon" width="16" height="12">
-                <use href="./images/icons/icons.svg#icon-envelope"></use>
-              </svg>
-              <span>info@devstudio.com</span>
-            </a>
+
+          <!-- Контакты -->
+          <ul class="menu__contacts-list">
+            <li class="menu__contacts-list__item">
+              <a class="menu__contacts-list__link" href="tel:+380961111111">
+                <span>+38&nbsp;096&nbsp;111&nbsp;11&nbsp;11</span>
+              </a>
+            </li>
+            <li class="menu__contacts-list__item">
+              <a class="menu__contacts-list__link menu__contacts-list__link--style" href="mailto:info@devstudio.com">
+                <span>info@devstudio.com</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="social-list-menu">
+            <li class="social-list-menu__ltem">
+              <a class="social-list-menu__link" href="" aria-label="Instagram Link">Instagram
+              </a>
+            </li>
+            <li class="social-list-menu__ltem">
+              <a class="social-list-menu__link" href="" aria-label="Twitter Link">Twitter
+              </a>
+            </li>
+            <li class="social-list-menu__ltem">
+              <a class="social-list-menu__link" href="" aria-label="Facebook Link">Facebook
+              </a>
+            </li>
+            <li class="social-list-menu__ltem">
+              <a class="social-list-menu__link" href="" aria-label="Linkedin Link">Linkedin
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Планшет -->
+        <ul class="nav__list">
+          <li class="nav__item nav__item--position-relative">
+            <a class="nav__link nav__link--accent " href="./index.html">Студія</a>
           </li>
-          <li class="contacts-list__item">
-            <a class="contacts-list__link contacts-list__link--accent" href="tel:+380961111111">
-              <svg class="contacts-list__icon" width="10" height="16">
-                <use href="./images/icons/icons.svg#icon-smartphone"></use>
-              </svg>
-              <span>+38 096 111 11 11</span>
-            </a>
+          <li class="nav__item--position-relative nav__link--active nav__link--after">
+            <a class="nav__link nav__link--accent" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--accent" href="#">Контакти</a>
           </li>
         </ul>
-      </div>
+      </nav>
+
+      <!-- Контакты -->
+      <ul class="contacts-list">
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="mailto:info@devstudio.com">
+            <svg class="contacts-list__icon" width="16" height="12">
+              <use href="./images/icons/icons.svg#icon-envelope"></use>
+            </svg>
+            <span>info@devstudio.com</span>
+          </a>
+        </li>
+        <li class="contacts-list__item">
+          <a class="contacts-list__link" href="tel:+380961111111">
+            <svg class="contacts-list__icon" width="10" height="16">
+              <use href="./images/icons/icons.svg#icon-smartphone"></use>
+            </svg>
+            <span>+38&nbsp;096&nbsp;111&nbsp;11&nbsp;11</span>
+          </a>
+        </li>
+      </ul>
+
     </div>
   </header>
   <main>
@@ -95,18 +149,12 @@
               <div class="project__description-container">
                 <picture>
                   <!-- ПК -->
-                  <source srcset="
-                        ./images/portfolio/d-project-1@1x.webp 370w,
-                        ./images/portfolio/d-project-1@2x.webp 740w,
-                        ./images/portfolio/d-project-1@3x.webp 1110w
-                      " type="image/webp" media="(min-width: 1200px)"
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
-                  <source srcset="
-                    ./images/portfolio/d-project-1@1x.jpg 370w
-                    ./images/portfolio/d-project-1@2x.jpg 740w,
+                  <source
+                    srcset="./images/portfolio/d-project-1@1x.webp 370w, ./images/portfolio/d-project-1@2x.webp 740w, ./images/portfolio/d-project-1@3x.webp 1110w"
+                    type="image/webp" media="(min-width: 1200px)" sizes="(min-width: 1200px) 370px" />
+                  <source srcset="./images/portfolio/d-project-1@1x.jpg 370w, ./images/portfolio/d-project-1@2x.jpg 740w,
                     ./images/portfolio/d-project-1@3x.jpg 1110w
-                  " media="(min-width: 1200px)"
-                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
+                  " media="(min-width: 1200px)" sizes="(min-width: 1200px) 370px" />
                   <!-- Планшет -->
                   <source srcset="
                         ./images/portfolio/t-project-1@1x.webp 354w,
@@ -114,7 +162,7 @@
                         ./images/portfolio/t-project-1@3x.webp 1062w
                       " type="image/webp" media="(min-width: 769px)" sizes="(min-width: 769px) 354px" />
                   <source srcset="
-                    ./images/portfolio/t-project-1@1x.jpg 370w
+                    ./images/portfolio/t-project-1@1x.jpg 370w,
                     ./images/portfolio/t-project-1@2x.jpg 740w,
                     ./images/portfolio/t-project-1@3x.jpg 1110w
                   " media="(min-width: 769px)" sizes="(min-width: 768px) 354px" />
@@ -126,7 +174,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-1@1x.jpg 370w
+                    ./images/portfolio/m-project-1@1x.jpg 370w,
                     ./images/portfolio/m-project-1@2x.jpg 740w,
                     ./images/portfolio/m-project-1@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -163,7 +211,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-2@1x.jpg 370w
+                    ./images/portfolio/d-project-2@1x.jpg 370w,
                     ./images/portfolio/d-project-2@2x.jpg 740w,
                     ./images/portfolio/d-project-2@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -176,7 +224,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-2@1x.jpg 370w
+                    ./images/portfolio/t-project-2@1x.jpg 370w,
                     ./images/portfolio/t-project-2@2x.jpg 740w,
                     ./images/portfolio/t-project-2@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -189,7 +237,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-2@1x.jpg 370w
+                    ./images/portfolio/m-project-2@1x.jpg 370w,
                     ./images/portfolio/m-project-2@2x.jpg 740w,
                     ./images/portfolio/m-project-2@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -229,7 +277,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-3@1x.jpg 370w
+                    ./images/portfolio/d-project-3@1x.jpg 370w,
                     ./images/portfolio/d-project-3@2x.jpg 740w,
                     ./images/portfolio/d-project-3@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -242,7 +290,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-3@1x.jpg 370w
+                    ./images/portfolio/t-project-3@1x.jpg 370w,
                     ./images/portfolio/t-project-3@2x.jpg 740w,
                     ./images/portfolio/t-project-3@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -255,7 +303,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-3@1x.jpg 370w
+                    ./images/portfolio/m-project-3@1x.jpg 370w,
                     ./images/portfolio/m-project-3@2x.jpg 740w,
                     ./images/portfolio/m-project-3@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -294,7 +342,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-4@1x.jpg 370w
+                    ./images/portfolio/d-project-4@1x.jpg 370w,
                     ./images/portfolio/d-project-4@2x.jpg 740w,
                     ./images/portfolio/d-project-4@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -307,7 +355,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-4@1x.jpg 370w
+                    ./images/portfolio/t-project-4@1x.jpg 370w,
                     ./images/portfolio/t-project-4@2x.jpg 740w,
                     ./images/portfolio/t-project-4@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -320,7 +368,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-4@1x.jpg 370w
+                    ./images/portfolio/m-project-4@1x.jpg 370w,
                     ./images/portfolio/m-project-4@2x.jpg 740w,
                     ./images/portfolio/m-project-4@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -360,7 +408,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-5@1x.jpg 370w
+                    ./images/portfolio/d-project-5@1x.jpg 370w,
                     ./images/portfolio/d-project-5@2x.jpg 740w,
                     ./images/portfolio/d-project-5@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -373,7 +421,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-5@1x.jpg 370w
+                    ./images/portfolio/t-project-5@1x.jpg 370w,
                     ./images/portfolio/t-project-5@2x.jpg 740w,
                     ./images/portfolio/t-project-5@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -386,7 +434,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-5@1x.jpg 370w
+                    ./images/portfolio/m-project-5@1x.jpg 370w,
                     ./images/portfolio/m-project-5@2x.jpg 740w,
                     ./images/portfolio/m-project-5@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -426,7 +474,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-6@1x.jpg 370w
+                    ./images/portfolio/d-project-6@1x.jpg 370w,
                     ./images/portfolio/d-project-6@2x.jpg 740w,
                     ./images/portfolio/d-project-6@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -439,7 +487,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-6@1x.jpg 370w
+                    ./images/portfolio/t-project-6@1x.jpg 370w,
                     ./images/portfolio/t-project-6@2x.jpg 740w,
                     ./images/portfolio/t-project-6@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -452,7 +500,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-6@1x.jpg 370w
+                    ./images/portfolio/m-project-6@1x.jpg 370w,
                     ./images/portfolio/m-project-6@2x.jpg 740w,
                     ./images/portfolio/m-project-6@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -492,7 +540,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-7@1x.jpg 370w
+                    ./images/portfolio/d-project-7@1x.jpg 370w,
                     ./images/portfolio/d-project-7@2x.jpg 740w,
                     ./images/portfolio/d-project-7@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -505,7 +553,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-7@1x.jpg 370w
+                    ./images/portfolio/t-project-7@1x.jpg 370w,
                     ./images/portfolio/t-project-7@2x.jpg 740w,
                     ./images/portfolio/t-project-7@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -518,7 +566,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-7@1x.jpg 370w
+                    ./images/portfolio/m-project-7@1x.jpg 370w,
                     ./images/portfolio/m-project-7@2x.jpg 740w,
                     ./images/portfolio/m-project-7@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -558,7 +606,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-8@1x.jpg 370w
+                    ./images/portfolio/d-project-8@1x.jpg 370w,
                     ./images/portfolio/d-project-8@2x.jpg 740w,
                     ./images/portfolio/d-project-8@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -571,7 +619,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-8@1x.jpg 370w
+                    ./images/portfolio/t-project-8@1x.jpg 370w,
                     ./images/portfolio/t-project-8@2x.jpg 740w,
                     ./images/portfolio/t-project-8@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -584,7 +632,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-8@1x.jpg 370w
+                    ./images/portfolio/m-project-8@1x.jpg 370w,
                     ./images/portfolio/m-project-8@2x.jpg 740w,
                     ./images/portfolio/m-project-8@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -623,7 +671,7 @@
                       " type="image/webp" media="(min-width: 1200px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/d-project-9@1x.jpg 370w
+                    ./images/portfolio/d-project-9@1x.jpg 370w,
                     ./images/portfolio/d-project-9@2x.jpg 740w,
                     ./images/portfolio/d-project-9@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -636,7 +684,7 @@
                       " type="image/webp" media="(min-width: 769px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 480px) 450px" />
                   <source srcset="
-                    ./images/portfolio/t-project-9@1x.jpg 370w
+                    ./images/portfolio/t-project-9@1x.jpg 370w,
                     ./images/portfolio/t-project-9@2x.jpg 740w,
                     ./images/portfolio/t-project-9@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -649,7 +697,7 @@
                       " type="image/webp" media="(min-width: 481px)"
                     sizes="(min-width: 1200px) 370px, (min-width: 769px) 354px, (min-width: 481px) 450px" />
                   <source srcset="
-                    ./images/portfolio/m-project-9@1x.jpg 370w
+                    ./images/portfolio/m-project-9@1x.jpg 370w,
                     ./images/portfolio/m-project-9@2x.jpg 740w,
                     ./images/portfolio/m-project-9@3x.jpg 1110w
                   " media="(min-width: 1200px)"
@@ -693,11 +741,11 @@
               <a class="address__link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9" target="_blank"
                 rel="noopener noreferrer nofollow">м. Київ, пр-т Лесі Українки, 26</a>
             </li>
-            <li class="address__item address__item--margin-top">
+            <li class="address__item">
               <a class="address__link address__link--footer-color"
                 href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li class="address__item address__item--margin-top">
+            <li class="address__item">
               <a class="address__link address__link--footer-color" href="tel:+380961111111">+38 096 111 11 11</a>
             </li>
           </ul>
@@ -709,11 +757,11 @@
       <div class="footer__wrapper">
         <p class="footer__text">Приєднуйтесь</p>
 
-        <ul class="social-list">
+        <ul class="social-list social-list--footer-jc-start">
           <li class="social-list__ltem">
             <a class="social-list__link social-list__link--bg" href="" aria-label="Instagram Link">
               <svg width="20" height="20">
-                <use href="./images/icons/icons.svg#icon-instagram-w"></use>
+                <use href="./images/icons/icons.svg#icon-instagram-footer"></use>
               </svg>
             </a>
           </li>
@@ -721,21 +769,21 @@
           <li class="social-list__ltem">
             <a class="social-list__link social-list__link--bg" href="" aria-label="Twitter Link">
               <svg width="20" height="20">
-                <use href="./images/icons/icons.svg#icon-twitter-w"></use>
+                <use href="./images/icons/icons.svg#icon-twitter-footer"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__ltem">
             <a class="social-list__link social-list__link--bg" href="" aria-label="Facebook Link">
               <svg width="20" height="20">
-                <use href="./images/icons/icons.svg#icon-facebook-w"></use>
+                <use href="./images/icons/icons.svg#icon-facebook-footer"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__ltem">
             <a class="social-list__link social-list__link--bg" href="" aria-label="Linkedin Link">
               <svg width="20" height="20">
-                <use href="./images/icons/icons.svg#icon-linkedin-w"></use>
+                <use href="./images/icons/icons.svg#icon-linkedin-footer"></use>
               </svg>
             </a>
           </li>
@@ -745,11 +793,9 @@
       <div class="footer__wrapper-form">
         <p class="footer__text">Підпишіться на розсилку</p>
         <!-- Форма с email -->
-
         <form class="form-mail" name="footer-mail" novalidate>
           <label class="form-mail__label" for="user_email"></label>
           <input class="form-mail__input" type="email" name="email" id="user_email" placeholder="E-mail" required />
-
           <button class="button btn-send" type="submit">
             <span class="btn-send__text"> Підписатися</span>
             <svg class="btn-send__icon" width="24" height="24">
