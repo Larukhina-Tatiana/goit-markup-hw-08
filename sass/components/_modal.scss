@@ -31,6 +31,10 @@
 
     @include transition ($transition-property: scale);
 
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+    }
+
     @media screen and (min-width: 1200px) {
         width: 528px;
         height: 581px;
