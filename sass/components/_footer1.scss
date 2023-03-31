@@ -1,0 +1,88 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: $hero-footer-background;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-flow: column wrap;
+    gap: 60px;
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 700;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: $hero;
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 20px;
+
+    &-form {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}
+
+.address {
+  @media screen and (max-width: $desctop) {
+    &__item:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+
+  &__link {
+    font-style: normal;
+    line-height: calc(24 / 14);
+    color: $white;
+
+    &--footer-color {
+      color: $address-color;
+    }
+
+    &--footer-color:hover,
+    &--footer-color:focus {
+      color: $accent-color;
+      @include transition($transition-property: color);
+    }
+  }
+
+  @media screen and (min-width: $desctop) {
+    &__item:not(:first-child) {
+      margin-top: 9px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .footer {
+    &__container {
+      justify-content: space-around;
+      flex-flow: row wrap;
+      align-items: baseline;
+      flex-flow: unset;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      align-items: left;
+    }
+
+    &__wrapper {
+      width: 45%;
+
+      text-align: start;
+    }
+  }
+}
